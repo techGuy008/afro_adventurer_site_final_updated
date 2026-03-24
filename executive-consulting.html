@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afro Adventurer™ — Executive Overview</title>
+<meta name="description" content="Find out exactly where your global team is losing performance — and what to do about it. The 4M Framework™ by Afro Adventurer™.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#0A0A0A;--gold:#C9A84C;--gl:#E4C47A;--gd:#8B6E2E;
+  --white:#FAF8F2;--gray:#BBBBBB;--card:#141210;--dark:#111009;
+  --border:rgba(201,168,76,0.18);--border2:rgba(201,168,76,0.35);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:"DM Sans",sans-serif;overflow-x:hidden;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+/* ══════════════════════════════════════
+   NAV — exact match to corporate.html
+   ══════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 40px;
+  background:rgba(10,10,10,0.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nl{display:flex;align-items:center;gap:14px;}
+.nl a{text-decoration:none;display:flex;align-items:center;gap:14px;}
+.nw{font-family:"Playfair Display",serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:0.06em;text-transform:uppercase;}
+.nw em{color:var(--gold);font-style:italic;}
+.n-divider{width:1px;height:20px;background:rgba(201,168,76,0.2);}
+.n-tag{font-size:12px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(201,168,76,0.6);}
+.nr{display:flex;align-items:center;gap:8px;}
+/* All nav+page buttons use .nb base */
+.nb{
+  font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  padding:9px 18px;text-decoration:none;transition:all 0.2s;white-space:nowrap;
+  cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+  height:40px;border:1px solid var(--border2);
+}
+.nb-o{background:transparent;color:var(--gold);border-color:var(--border2);}
+.nb-o:hover{background:rgba(201,168,76,0.08);border-color:var(--gold);}
+.nb-g{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.nb-g:hover{background:var(--gl);border-color:var(--gl);}
+
+/* ══════════════════════════════════════
+   LAYOUT
+   ══════════════════════════════════════ */
+.sw{padding:6rem 40px;max-width:1100px;margin:0 auto;}
+.divider{height:1px;background:var(--border);max-width:1100px;margin:0 auto;}
+.lbl{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block;font-weight:600;}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:700;line-height:1.2;}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);}
+h2{font-size:clamp(1.5rem,3vw,2.4rem);}
+h3{font-size:1rem;font-weight:600;}
+p,li{color:var(--gray);font-size:0.96rem;}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+
+/* ══════════════════════════════════════
+   HERO
+   ══════════════════════════════════════ */
+#hero{padding-top:9rem;padding-bottom:5rem;}
+.hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:2.2rem;}
+.hero-kicker-line{width:32px;height:1px;background:var(--gold);flex-shrink:0;}
+.hero-kicker span{font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+#hero h1{max-width:880px;margin-bottom:1.6rem;color:var(--white);}
+#hero .hero-sub{font-size:1.08rem;max-width:680px;color:var(--gray);margin-bottom:1.6rem;line-height:1.8;}
+.hero-data{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:2.4rem;max-width:680px;}
+.hero-data-item{padding:1rem 1.4rem;text-align:center;border-right:1px solid var(--border);}
+.hero-data-item:last-child{border-right:none;}
+.hero-data-num{font-family:"Playfair Display",serif;font-size:1.6rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:0.25rem;}
+.hero-data-label{font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);font-weight:500;line-height:1.4;}
+.hero-note{font-size:12px;color:rgba(187,187,187,0.45);letter-spacing:0.04em;margin-top:0.9rem;display:block;}
+
+/* ══════════════════════════════════════
+   AUTHORITY
+   ══════════════════════════════════════ */
+#authority{padding-top:3.5rem;padding-bottom:3.5rem;}
+.auth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;margin-top:1.8rem;}
+.auth-item{border-left:1px solid var(--gold);padding:0.3rem 0 0.3rem 1.2rem;}
+.auth-item h3{color:var(--white);margin-bottom:0.35rem;font-size:0.88rem;}
+.auth-item p{font-size:0.81rem;color:var(--gray);line-height:1.6;}
+
+/* ══════════════════════════════════════
+   PDF
+   ══════════════════════════════════════ */
+#pdf-section{padding-top:5rem;padding-bottom:5rem;}
+#pdf-section h2{margin-bottom:0.6rem;}
+#pdf-section .psub{color:var(--gray);margin-bottom:2.4rem;max-width:560px;}
+.pdf-frame-wrap{width:100%;background:var(--card);border:1px solid var(--border);overflow:hidden;}
+.pdf-frame-wrap iframe{width:100%;height:720px;border:none;display:block;}
+.pdf-actions{margin-top:1.4rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;}
+.pdf-actions .pnote{font-size:12px;color:var(--gray);letter-spacing:0.04em;}
+
+/* ══════════════════════════════════════
+   PROOF
+   ══════════════════════════════════════ */
+#proof{padding-top:5rem;padding-bottom:5rem;}
+#proof h2{margin-bottom:1.6rem;}
+.proof-list{list-style:none;display:flex;flex-direction:column;gap:0.9rem;max-width:660px;}
+.proof-list li{display:flex;align-items:flex-start;gap:0.9rem;font-size:0.93rem;color:var(--gray);}
+.proof-list li::before{content:'★';color:var(--gold);flex-shrink:0;font-size:0.58rem;margin-top:0.32rem;}
+.proof-quote{margin-top:2.8rem;border-left:1px solid var(--gold);padding:1.1rem 1.6rem;font-family:"Playfair Display",serif;font-size:1.1rem;font-style:italic;color:var(--white);max-width:580px;}
+.proof-cta{margin-top:2rem;}
+
+/* ══════════════════════════════════════
+   4M FRAMEWORK — 2×2 grid + centered video below
+   ══════════════════════════════════════ */
+#framework{padding-top:5rem;padding-bottom:5rem;}
+#framework h2{margin-bottom:0.6rem;}
+#framework .fsub{color:var(--gray);margin-bottom:2.6rem;max-width:560px;}
+.fw-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.4rem;
+  margin-bottom:2.6rem;
+}
+.fw-card{
+  border:1px solid var(--border);
+  padding:2rem 1.8rem;
+  position:relative;
+  cursor:default;
+  transition:border-color 0.3s, background 0.3s, transform 0.2s;
+}
+.fw-card:hover{
+  border-color:var(--gold);
+  background:rgba(201,168,76,0.04);
+  transform:translateY(-2px);
+}
+.fw-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--gold);}
+.fw-m{font-family:"Playfair Display",serif;font-size:2rem;color:var(--gold);opacity:1;margin-bottom:0.5rem;line-height:1;font-weight:700;}
+.fw-card h3{color:var(--white);font-size:0.95rem;margin-bottom:0.45rem;letter-spacing:0.02em;}
+.fw-card p{font-size:0.83rem;line-height:1.65;color:var(--gray);}
+.fw-close{font-size:0.87rem;color:var(--gray);font-style:italic;letter-spacing:0.04em;margin-bottom:3rem;}
+
+/* Video — centered below 4M cards */
+.video-center{display:flex;justify-content:center;margin-top:0;}
+.video-wrap{
+  width:min(320px,85vw);
+  aspect-ratio:9/16;
+  background:var(--card);
+  border:1px solid var(--border2);
+  overflow:hidden;
+}
+.video-wrap video{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ══════════════════════════════════════
+   CONVERSION
+   ══════════════════════════════════════ */
+#conversion{padding-top:5rem;padding-bottom:5rem;}
+#conversion h2{margin-bottom:1.8rem;max-width:740px;}
+.cost-list{list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2.8rem;max-width:560px;}
+.cost-list li{display:flex;align-items:flex-start;gap:0.9rem;font-size:0.93rem;color:var(--gray);}
+.cost-list li::before{content:'→';color:var(--gold);flex-shrink:0;}
+.conv-sub{font-size:12px;color:rgba(187,187,187,0.45);margin-top:1rem;max-width:440px;line-height:1.65;}
+
+/* ══════════════════════════════════════
+   CLOSE
+   ══════════════════════════════════════ */
+#close{text-align:center;padding-top:5rem;padding-bottom:5rem;}
+#close p{font-family:"Playfair Display",serif;font-size:clamp(1.1rem,2.5vw,1.45rem);color:var(--white);max-width:580px;margin:0 auto 2.8rem;line-height:1.6;font-style:italic;}
+#close .btn-row{justify-content:center;}
+
+/* ══════════════════════════════════════
+   FOOTER — matches corporate.html
+   ══════════════════════════════════════ */
+footer{border-top:1px solid var(--border);padding:48px 40px 24px;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.flogo{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;}
+.flogo em{color:var(--gold);font-style:italic;}
+.flinks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+/* Footer links use same .nb base but slightly smaller */
+.flink{
+  font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  padding:7px 14px;text-decoration:none;color:var(--gold);
+  border:1px solid var(--border2);transition:all 0.2s;display:inline-flex;align-items:center;
+}
+.flink:hover{background:rgba(201,168,76,0.08);border-color:var(--gold);}
+.flink-g{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.flink-g:hover{background:var(--gl);border-color:var(--gl);}
+.fnote{font-size:11px;color:rgba(187,187,187,0.35);letter-spacing:0.06em;}
+.legal-bar{background:var(--dark);border-top:1px solid var(--border);padding:16px 40px;}
+.legal-bar p{max-width:1100px;margin:0 auto;font-size:10px;color:rgba(187,187,187,0.3);line-height:1.6;letter-spacing:0.03em;}
+
+/* ══════════════════════════════════════
+   FADE ANIMATION
+   ══════════════════════════════════════ */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+@media(prefers-reduced-motion:reduce){.fade-up{transition:none;opacity:1;transform:none;}}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — TABLET 681–1024px
+   ══════════════════════════════════════ */
+@media(min-width:681px) and (max-width:1024px){
+  .sw{padding:5rem 32px;}
+  nav{padding:12px 24px;}
+  .auth-grid{grid-template-columns:1fr 1fr;}
+  .hero-data{max-width:100%;}
+  h1{font-size:2.6rem;}
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — MOBILE ≤680px
+   ══════════════════════════════════════ */
+@media(max-width:680px){
+  nav{padding:10px 12px;}
+  .n-divider,.n-tag{display:none;}
+  .nw{font-size:11px;}
+  .nb{font-size:9px;padding:7px 10px;letter-spacing:0.08em;height:36px;}
+  .nr{gap:5px;}
+
+  .sw{padding:4rem 20px;}
+  #hero{padding-top:7rem;padding-bottom:3.5rem;}
+  h1{font-size:1.95rem;}
+  h2{font-size:1.35rem;}
+
+  .hero-data{grid-template-columns:1fr;max-width:100%;}
+  .hero-data-item{border-right:none;border-bottom:1px solid var(--border);}
+  .hero-data-item:last-child{border-bottom:none;}
+
+  .auth-grid{grid-template-columns:1fr;}
+  .fw-grid{grid-template-columns:1fr;}
+
+  .pdf-frame-wrap iframe{height:420px;}
+
+  .btn-row{flex-direction:column;align-items:flex-start;}
+  #close .btn-row{align-items:center;}
+
+  footer{padding:32px 20px 20px;}
+  .legal-bar{padding:14px 20px;}
+  .flinks{gap:6px;}
+  .flink{font-size:10px;padding:6px 11px;}
+}
+
+@media(max-width:400px){
+  .nw{font-size:10px;}
+  .nb{font-size:8px;padding:6px 8px;}
+  h1{font-size:1.7rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nl">
+    <a href="https://afroadventurers.com/corporate">
+      <div class="nw">AFRO <em>Adventurer™</em></div>
+      <div class="n-divider"></div>
+      <div class="n-tag">Executive Overview</div>
+    </a>
+  </div>
+  <div class="nr">
+    <a class="nb nb-o" href="https://afroadventurers.com/corporate#diagnostic">Free Diagnostic</a>
+    <a class="nb nb-o" href="https://gamma.app/docs/Why-Global-Teams-Break-How-to-Fix-Them-lha1h3oca0xdg35" target="_blank" rel="noopener">Case Study Deck</a>
+    <a class="nb nb-g" href="https://calendly.com/quianaberry" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="sw" id="hero">
+  <div class="hero-kicker fade-up">
+    <div class="hero-kicker-line"></div>
+    <span>For Organizations</span>
+  </div>
+
+  <h1 class="fade-up">Your team isn't underperforming.<br>Your system is.</h1>
+
+  <p class="hero-sub fade-up">Global teams lose billions annually not to bad talent — but to friction no one has named yet. Cultural misalignment. Generational disconnects. Communication breakdown. Cognitive mismatch. It's costing you right now, whether you see it or not.</p>
+
+  <div class="hero-data fade-up">
+    <div class="hero-data-item">
+      <div class="hero-data-num">$1T+</div>
+      <div class="hero-data-label">Lost annually to voluntary turnover</div>
+    </div>
+    <div class="hero-data-item">
+      <div class="hero-data-num">76%</div>
+      <div class="hero-data-label">Of employees report burnout</div>
+    </div>
+    <div class="hero-data-item">
+      <div class="hero-data-num">35%</div>
+      <div class="hero-data-label">Performance gain with explicit cultural norms</div>
+    </div>
+  </div>
+
+  <div class="btn-row fade-up">
+    <a class="nb nb-g" href="https://afroadventurers.com/corporate#diagnostic">Take the Free Diagnostic</a>
+    <a class="nb nb-o" href="#pdf-section">View Executive Overview ↓</a>
+  </div>
+  <span class="hero-note">9 questions · 3 minutes · instant score. No pitch until we understand your team.</span>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ AUTHORITY ══ -->
+<div class="sw" id="authority">
+  <span class="lbl">Why decision-makers trust this work</span>
+  <div class="auth-grid">
+    <div class="auth-item fade-up">
+      <h3>Built Inside Enterprise</h3>
+      <p>Developed through product leadership at Red Hat / IBM — where misaligned global teams have real P&amp;L consequences</p>
+    </div>
+    <div class="auth-item fade-up">
+      <h3>Research-Backed</h3>
+      <p>Grounded in applied research at Princeton, NOAA, and the National Weather Center · Published through the Linux Foundation AI</p>
+    </div>
+    <div class="auth-item fade-up">
+      <h3>Trusted by Leading Organizations</h3>
+      <p>Deployed with Google, AWS, GitHub, Mars Wrigley, Unilever, Ally Financial, Adyen, EnergyHub, NSBE, PyTorch, and CUNY Baruch</p>
+    </div>
+    <div class="auth-item fade-up">
+      <h3>Recognized on Global Stages</h3>
+      <p>Featured speaker at Grace Hopper, GitHub Universe, and AfroTech · Media: CBS, PIX11 · Trailblazer Nominee 2024 &amp; 2025</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ PDF ══ -->
+<div class="sw" id="pdf-section">
+  <span class="lbl fade-up">Executive Overview</span>
+  <h2 class="fade-up">The 4M Framework™</h2>
+  <p class="psub fade-up">A 1-page breakdown of how global teams break, and exactly how to fix them.</p>
+
+  <div class="pdf-frame-wrap fade-up">
+    <!--
+      Replace src with your hosted PDF URL.
+      e.g. src="https://afroadventurers.com/assets/QuianaBerry_CorporateOverview_v11_final.pdf"
+    -->
+    <iframe
+      src="./images/QuianaBerry_CorporateOverview_v11_final.pdf"
+      title="4M Framework Executive Overview"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="pdf-actions fade-up">
+    <span style="color:var(--gray);font-size:13px;">Want a copy?</span>
+    <a class="nb nb-o" href="https://afroadventurers.com/assets/QuianaBerry_CorporateOverview_v11_final.pdf" download>Download PDF</a>
+    <span class="pnote">No download required to view</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ PROOF ══ -->
+<div class="sw" id="proof">
+  <span class="lbl fade-up">Field Results</span>
+  <h2 class="fade-up">This isn't theory. It's field-tested.</h2>
+  <ul class="proof-list fade-up">
+    <li>Deployed across global technical, AI, and corporate audiences — Mars Wrigley, Ally Financial, Grace Hopper, Adyen, EnergyHub and more</li>
+    <li>Live diagnostics run across teams in North America, Europe, Africa, and Asia</li>
+    <li>Applied inside enterprise product environments and high-retention communities</li>
+    <li>Built on field data across 3 continents and 500+ global practitioners</li>
+  </ul>
+  <blockquote class="proof-quote fade-up">
+    "Consistent patterns across teams — regardless of region or role."
+  </blockquote>
+  <div class="proof-cta fade-up">
+    <a class="nb nb-o" href="https://gamma.app/docs/Why-Global-Teams-Break-How-to-Fix-Them-lha1h3oca0xdg35" target="_blank" rel="noopener">View Full Case Study Deck →</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ FRAMEWORK — 2×2 grid + centered video below ══ -->
+<div class="sw" id="framework">
+  <span class="lbl fade-up">The System</span>
+  <h2 class="fade-up">The 4M Framework™</h2>
+  <p class="fsub fade-up">Four dimensions where global teams consistently break — and where your diagnostic begins.</p>
+
+  <div class="fw-grid">
+    <div class="fw-card fade-up">
+      <div class="fw-m">M1</div>
+      <h3>Multicultural</h3>
+      <p>Misaligned norms and trust breakdown across regional and cultural lines</p>
+    </div>
+    <div class="fw-card fade-up">
+      <div class="fw-m">M2</div>
+      <h3>Multigenerational</h3>
+      <p>Leadership and expectation gaps between career stages and lived experience</p>
+    </div>
+    <div class="fw-card fade-up">
+      <div class="fw-m">M3</div>
+      <h3>Multilingual</h3>
+      <p>Communication breakdown and systemic misinterpretation across languages</p>
+    </div>
+    <div class="fw-card fade-up">
+      <div class="fw-m">M4</div>
+      <h3>Multi-ability</h3>
+      <p>Underutilized talent and cognitive mismatch holding your team's ceiling down</p>
+    </div>
+  </div>
+
+  <p class="fw-close fade-up">This is the system behind every engagement — and your free diagnostic maps exactly where your team sits.</p>
+
+  <!-- Video centered below cards -->
+  <div class="video-center">
+    <div class="video-wrap fade-up">
+      <!--
+        Replace src with your hosted video URL.
+        Your uploaded file: Add_a_headg.mp4
+        e.g. src="https://afroadventurers.com/assets/4m-overview.mp4"
+      -->
+      <video
+        controls
+        playsinline
+        autoplay
+        muted
+        loop
+        src="https://afroadventurers.com/assets/4m-overview.mp4"
+      ></video>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ CONVERSION ══ -->
+<div class="sw" id="conversion">
+  <span class="lbl fade-up">Cost of Inaction</span>
+  <h2 class="fade-up">If you're already seeing these signals, the cost is compounding.</h2>
+  <ul class="cost-list fade-up">
+    <li>Unexplained attrition no exit interview captures</li>
+    <li>Slow decision-making across regions with no clear owner</li>
+    <li>AI adoption rolled out with no measurable behavior change</li>
+    <li>Managers who are skilled individually but struggling to lead across difference</li>
+  </ul>
+
+  <div class="btn-row fade-up">
+    <a class="nb nb-g" href="https://calendly.com/quianaberry" target="_blank" rel="noopener">Book a 30-Min Discovery Call</a>
+    <a class="nb nb-o" href="https://afroadventurers.com/corporate#diagnostic">Take the Free Diagnostic</a>
+  </div>
+  <p class="conv-sub fade-up">We identify where your team is breaking — before it shows up in a performance review. 9 questions · 3 minutes · instant score.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ CLOSE ══ -->
+<div class="sw" id="close">
+  <p class="fade-up">Three engagement tiers. One diagnostic system. Built for real-world teams — not consulting decks.</p>
+  <div class="btn-row fade-up">
+    <a class="nb nb-g" href="https://calendly.com/quianaberry" target="_blank" rel="noopener">Book a Discovery Call</a>
+    <a class="nb nb-o" href="https://gamma.app/docs/Why-Global-Teams-Break-How-to-Fix-Them-lha1h3oca0xdg35" target="_blank" rel="noopener">View Case Study Deck →</a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="flogo">AFRO <em>Adventurer™</em></div>
+    <div class="flinks">
+      <a class="flink" href="https://afroadventurers.com/corporate">Main Site</a>
+      <a class="flink" href="https://afroadventurers.com/corporate#diagnostic">Free Diagnostic</a>
+      <a class="flink" href="https://gamma.app/docs/Why-Global-Teams-Break-How-to-Fix-Them-lha1h3oca0xdg35" target="_blank" rel="noopener">Case Study Deck</a>
+      <a class="flink flink-g" href="https://calendly.com/quianaberry" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+    <div class="fnote">&copy; 2026 Afro Adventurer™</div>
+  </div>
+</footer>
+<div class="legal-bar">
+  <p>&copy; 2026 Afro Adventurer™. All rights reserved. All frameworks, workshop methodologies, and organizational materials are proprietary intellectual property of Afro Adventurer LLC. Nothing on this page constitutes legal, financial, or HR compliance advice.</p>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

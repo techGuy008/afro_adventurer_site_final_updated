@@ -1,0 +1,3312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Work Ready&#8482; &#8212; Afro Adventurer&#8482;</title>
+    <meta
+      property="og:title"
+      content="Remote Work Ready&#8482; &#8212; Are You Ready to Go Global?"
+    />
+    <meta
+      property="og:description"
+      content="Take the Remote Work Ready Score&#8482; assessment. Find out exactly where you stand and get your personalized roadmap to remote work and global living."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://afroadventurer.com/remote-work-ready.html"
+    />
+    <meta
+      name="description"
+      content="Take the Remote Work Ready Score&#8482; assessment. Find out exactly where you stand and get your personalized roadmap to remote work and global living."
+    />
+    <link
+      rel="canonical"
+      href="https://afroadventurer.com/remote-work-ready.html"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --black: #080705;
+        --deep: #0d0b08;
+        --card: #13110d;
+        --gold: #c9a84c;
+        --gl: #e4c47a;
+        --gd: #8b6e2e;
+        --white: #faf8f2;
+        --gray: #aaaaaa;
+        --border: rgba(201, 168, 76, 0.16);
+        --ink: #1a1710;
+        --terracotta: #c4622d;
+        --sage: #4a6741;
+        --ocean: #2b5f7e;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        overflow-x: hidden;
+        line-height: 1.7;
+      }
+
+      /* &#9472;&#9472; MAP BACKGROUND TEXTURE &#9472;&#9472; */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(201, 168, 76, 0.04) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(43, 95, 126, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* &#9472;&#9472; NAV &#9472;&#9472; */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 32px;
+        background: rgba(8, 7, 5, 0.94);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+      .nav-logo em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .nav-pill {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        background: rgba(201, 168, 76, 0.12);
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+      }
+      .nav-cta {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 9px 20px;
+        background: var(--gold);
+        color: var(--black);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--gl);
+      }
+      .back-link {
+        font-size: 10px;
+        color: rgba(250, 248, 242, 0.4);
+        text-decoration: none;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .back-link:hover {
+        color: var(--gold);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      /* &#9472;&#9472; HERO &#9472;&#9472; */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 24px 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-map {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 80% 60% at 50% 40%,
+            rgba(201, 168, 76, 0.06) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 40% 40% at 20% 70%,
+            rgba(43, 95, 126, 0.08) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 30% 30% at 80% 30%,
+            rgba(196, 98, 45, 0.06) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+      /* dotted map lines */
+
+      .hero-pin {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        opacity: 0;
+        animation: fade-up 0.8s 0.2s forwards;
+      }
+      .hero-pin::before,
+      .hero-pin::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: var(--gd);
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(42px, 8vw, 88px);
+        font-weight: 900;
+        line-height: 0.95;
+        color: var(--white);
+        margin-bottom: 10px;
+        opacity: 0;
+        animation: fade-up 0.8s 0.4s forwards;
+      }
+      .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .hero-tm {
+        font-size: clamp(20px, 3vw, 36px);
+        color: var(--gd);
+        vertical-align: super;
+        font-family: "DM Mono", monospace;
+      }
+      .hero-sub {
+        font-size: clamp(16px, 2.2vw, 21px);
+        color: rgba(250, 248, 242, 0.72);
+        max-width: 580px;
+        margin: 20px auto 40px;
+        line-height: 1.7;
+        opacity: 0;
+        animation: fade-up 0.8s 0.6s forwards;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+        animation: fade-up 0.8s 0.8s forwards;
+      }
+      .btn-gold {
+        display: inline-block;
+        padding: 15px 32px;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-gold:hover {
+        background: var(--gl);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        display: inline-block;
+        padding: 14px 30px;
+        background: transparent;
+        color: var(--gold);
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid rgba(201, 168, 76, 0.45);
+        transition: all 0.25s;
+      }
+      .btn-outline:hover {
+        background: rgba(201, 168, 76, 0.08);
+      }
+      /* floating pins */
+      .f-pin {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        opacity: 0;
+        animation: float-in 1s forwards;
+      }
+      .f-pin-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.2);
+      }
+      .f-pin-label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        white-space: nowrap;
+        background: rgba(8, 7, 5, 0.85);
+        padding: 3px 8px;
+        border: 1px solid var(--border);
+      }
+      .f-pin:nth-child(1) {
+        top: 25%;
+        left: 12%;
+        animation-delay: 1.2s;
+      }
+      .f-pin:nth-child(2) {
+        top: 35%;
+        right: 10%;
+        animation-delay: 1.5s;
+      }
+      .f-pin:nth-child(3) {
+        bottom: 30%;
+        left: 18%;
+        animation-delay: 1.8s;
+      }
+      .f-pin:nth-child(4) {
+        top: 20%;
+        right: 22%;
+        animation-delay: 2.1s;
+      }
+      .f-pin:nth-child(5) {
+        bottom: 25%;
+        right: 15%;
+        animation-delay: 2.4s;
+      }
+      @keyframes float-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* &#9472;&#9472; SECTIONS SHARED &#9472;&#9472; */
+      section {
+        padding: 88px 24px;
+        position: relative;
+        z-index: 1;
+      }
+      .sec-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .eyebrow {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .eyebrow::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 1px;
+        background: var(--gd);
+      }
+      h2.sec-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(28px, 5vw, 52px);
+        font-weight: 700;
+        line-height: 1.05;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      h2.sec-title em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .sec-body {
+        font-size: 17px;
+        color: rgba(250, 248, 242, 0.72);
+        line-height: 1.78;
+        max-width: 640px;
+      }
+
+      /* &#9472;&#9472; WHAT YOU GET &#9472;&#9472; */
+      .get-sec {
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .get-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        margin-top: 52px;
+      }
+      .get-card {
+        background: var(--card);
+        padding: 36px 32px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .get-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        transform: scaleX(0);
+        transition: transform 0.4s;
+      }
+      .get-card:hover::before {
+        transform: scaleX(1);
+      }
+      .get-card:hover {
+        background: #1a1610;
+      }
+      .get-icon {
+        font-size: 32px;
+        margin-bottom: 18px;
+        display: block;
+      }
+      .get-num {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        color: var(--gd);
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+      }
+      .get-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 10px;
+      }
+      .get-desc {
+        font-size: 14px;
+        color: rgba(250, 248, 242, 0.65);
+        line-height: 1.72;
+      }
+      .get-tag {
+        display: inline-block;
+        margin-top: 14px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        padding: 4px 10px;
+        border: 1px solid rgba(201, 168, 76, 0.25);
+      }
+
+      /* &#9472;&#9472; ECOSYSTEM MAP &#9472;&#9472; */
+      .eco-sec {
+        background: var(--black);
+      }
+      .eco-map {
+        position: relative;
+        margin-top: 60px;
+      }
+      /* central hub */
+      .eco-hub {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1a1408, #2a1e08);
+        border: 2px solid var(--gold);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 60px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 60px rgba(201, 168, 76, 0.15);
+      }
+      .eco-hub::before {
+        content: "";
+        position: absolute;
+        inset: -12px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+      }
+      .eco-hub-label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gd);
+        margin-bottom: 4px;
+      }
+      .eco-hub-name {
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--gold);
+        text-align: center;
+        line-height: 1.2;
+      }
+      /* orbit nodes */
+      .eco-nodes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .eco-node {
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 28px 22px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .eco-node.active {
+        border-color: rgba(201, 168, 76, 0.5);
+        background: rgba(201, 168, 76, 0.04);
+      }
+      .eco-node::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+      }
+      .eco-node.active::after {
+        transform: scaleX(1);
+      }
+      .eco-node:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
+      }
+      .eco-node-icon {
+        font-size: 28px;
+        margin-bottom: 14px;
+      }
+      .eco-node-status {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .eco-node-status.now {
+        color: var(--gold);
+      }
+      .eco-node-status.soon {
+        color: rgba(250, 248, 242, 0.35);
+      }
+      .eco-node-name {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 8px;
+        line-height: 1.2;
+      }
+      .eco-node-desc {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.6);
+        line-height: 1.65;
+      }
+      .eco-node-link {
+        display: inline-block;
+        margin-top: 14px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-decoration: none;
+        transition: gap 0.2s;
+      }
+      .eco-node-link:hover {
+        text-decoration: underline;
+      }
+      /* connector lines */
+      .eco-connector {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin: 0 auto 20px;
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom, var(--gd), transparent);
+      }
+
+      /* &#9472;&#9472; COMPARISON &#9472;&#9472; */
+      .cmp-sec {
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+      }
+      .cmp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        margin-top: 52px;
+      }
+      .cmp-col {
+        padding: 40px 32px;
+      }
+      .cmp-col.alone {
+        background: #100d09;
+      }
+      .cmp-col.together {
+        background: rgba(201, 168, 76, 0.04);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+      }
+      .cmp-head {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 28px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .cmp-col.alone .cmp-head {
+        color: rgba(250, 248, 242, 0.45);
+      }
+      .cmp-col.together .cmp-head {
+        color: var(--gold);
+      }
+      .cmp-item {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 18px;
+        align-items: flex-start;
+      }
+      .cmp-icon {
+        font-size: 16px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .cmp-text {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .cmp-col.alone .cmp-text {
+        color: rgba(250, 248, 242, 0.5);
+      }
+      .cmp-col.together .cmp-text {
+        color: rgba(250, 248, 242, 0.85);
+      }
+
+      /* &#9472;&#9472; MEMBERSHIP &#9472;&#9472; */
+      .mem-sec {
+        background: var(--black);
+      }
+      .mem-card {
+        max-width: 760px;
+        margin: 52px auto 0;
+        background: var(--card);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 52px 48px;
+        position: relative;
+        overflow: hidden;
+      }
+      .mem-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--gd), var(--gold), var(--gd));
+      }
+      .mem-price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin: 28px 0 8px;
+      }
+      .mem-price {
+        font-family: "DM Mono", monospace;
+        font-size: 52px;
+        font-weight: 500;
+        color: var(--gold);
+      }
+      .mem-price-sub {
+        font-size: 13px;
+        color: var(--gray);
+      }
+      .mem-includes {
+        list-style: none;
+        margin: 24px 0 32px;
+      }
+      .mem-includes li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+        color: rgba(250, 248, 242, 0.82);
+      }
+      .mem-includes li::before {
+        content: "\2192";
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+      .mem-note {
+        font-size: 12px;
+        color: rgba(250, 248, 242, 0.35);
+        line-height: 1.7;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+      }
+
+      /* &#9472;&#9472; DISCLAIMER &#9472;&#9472; */
+      .disc-sec {
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+      }
+      .disc-box {
+        max-width: 760px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 32px 36px;
+      }
+      .disc-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: rgba(250, 248, 242, 0.4);
+        margin-bottom: 14px;
+      }
+      .disc-text {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.4);
+        line-height: 1.85;
+      }
+
+      /* &#9472;&#9472; CLOSING CTA &#9472;&#9472; */
+      .close-sec {
+        padding: 100px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background: var(--black);
+      }
+      .close-sec::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 60% at 50% 50%,
+          rgba(201, 168, 76, 0.07) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .close-sec .eyebrow {
+        justify-content: center;
+      }
+      .close-sec .eyebrow::after {
+        display: none;
+      }
+      .close-sec .eyebrow::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 1px;
+        background: var(--gd);
+      }
+      .close-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(32px, 6vw, 64px);
+        font-weight: 900;
+        line-height: 1;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      .close-title em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .close-sub {
+        font-size: 18px;
+        color: rgba(250, 248, 242, 0.65);
+        max-width: 520px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+      }
+
+      /* &#9472;&#9472; FOOTER &#9472;&#9472; */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 28px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        background: var(--dark);
+      }
+      .footer-brand {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+      .footer-brand em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .footer-note {
+        font-size: 11px;
+        color: rgba(250, 248, 242, 0.3);
+      }
+
+      /* &#9472;&#9472; REVEAL ANIMATION &#9472;&#9472; */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.75s,
+          transform 0.75s;
+      }
+      .reveal.on {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* &#9472;&#9472; MOBILE &#9472;&#9472; */
+      @media (max-width: 768px) {
+        nav {
+          padding: 10px 16px;
+        }
+        .nav-logo {
+          font-size: 11px;
+        }
+        .back-link {
+          display: none;
+        }
+        .get-grid {
+          grid-template-columns: 1fr;
+        }
+        .eco-nodes {
+          grid-template-columns: 1fr;
+        }
+        .cmp-grid {
+          grid-template-columns: 1fr;
+        }
+        .mem-card {
+          padding: 32px 22px;
+        }
+        .mem-price {
+          font-size: 40px;
+        }
+        .f-pin {
+          display: none;
+        }
+        section {
+          padding: 64px 18px;
+        }
+        .disc-box {
+          padding: 24px 20px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-ctas {
+          flex-direction: column;
+          align-items: center;
+        }
+        .btn-gold,
+        .btn-outline {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* &#9472;&#9472; MOBILE TOUCH & GLOBAL &#9472;&#9472; */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a,
+      button {
+        touch-action: manipulation;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 480px) {
+        .get-grid {
+          grid-template-columns: 1fr;
+        }
+        .eco-nodes {
+          grid-template-columns: 1fr;
+        }
+        .cmp-grid {
+          grid-template-columns: 1fr;
+        }
+        .mem-card {
+          padding: 28px 18px;
+        }
+        .mem-price {
+          font-size: 36px;
+        }
+        .hero h1 {
+          font-size: clamp(32px, 10vw, 52px);
+        }
+        .hero-sub {
+          font-size: 15px;
+        }
+        .btn-gold,
+        .btn-outline {
+          width: 100%;
+          text-align: center;
+        }
+        .hero-ctas {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+      input,
+      select,
+      textarea {
+        font-size: 16px !important;
+      }
+      .mem-see-inside {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(36px, 5vw, 52px);
+        font-style: italic;
+        font-weight: 700;
+        color: var(--gold);
+        text-align: center;
+        line-height: 1.1;
+      }
+
+      /* &#9472;&#9472; RWR SCORE CALCULATOR &#9472;&#9472; */
+      .rwr-calc-sec {
+        padding: 80px 24px;
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+      }
+      .rwr-calc-inner {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .rwr-calc-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .rwr-caveat {
+        font-size: 12px;
+        color: rgba(250, 248, 242, 0.4);
+        font-style: italic;
+        max-width: 560px;
+        margin: 12px auto 0;
+        line-height: 1.7;
+      }
+      .rwr-quiz {
+        background: rgba(201, 168, 76, 0.04);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+      }
+      .rwr-q-track {
+        min-height: 240px;
+      }
+      .rwr-q {
+        display: none;
+        padding: 36px 32px 20px;
+        animation: fade-up 0.35s ease;
+      }
+      .rwr-q.active {
+        display: block;
+      }
+      .rwr-q-num {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        color: var(--gold);
+        letter-spacing: 0.22em;
+        margin-bottom: 14px;
+      }
+      .rwr-q-text {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(16px, 2.4vw, 21px);
+        color: var(--white);
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      .rwr-q-opts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .rwr-q-opts button {
+        background: transparent;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        color: rgba(250, 248, 242, 0.65);
+        padding: 11px 14px;
+        font-size: 12px;
+        font-family: "DM Sans", sans-serif;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.18s;
+        line-height: 1.4;
+      }
+      .rwr-q-opts button:hover {
+        border-color: var(--gold);
+        color: var(--white);
+        background: rgba(201, 168, 76, 0.08);
+      }
+      .rwr-q-opts button:active {
+        background: rgba(201, 168, 76, 0.15);
+      }
+      .rwr-progress-wrap {
+        padding: 0 32px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .rwr-progress-bar {
+        flex: 1;
+        height: 3px;
+        background: rgba(201, 168, 76, 0.1);
+      }
+      .rwr-progress-fill {
+        height: 100%;
+        background: var(--gold);
+        width: 0%;
+        transition: width 0.4s ease;
+      }
+      .rwr-progress-label {
+        font-size: 10px;
+        color: rgba(250, 248, 242, 0.35);
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+      }
+      /* RESULT BOARD */
+      .rwr-board {
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        background: rgba(8, 7, 5, 0.95);
+        overflow: hidden;
+      }
+      .rwr-board-header {
+        background: var(--gold);
+        padding: 12px 24px;
+        text-align: center;
+      }
+      .rwr-board-eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--black);
+      }
+      .rwr-board-main {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 28px;
+        padding: 28px 28px 20px;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+      }
+      .rwr-score-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .rwr-score-ring {
+        position: relative;
+        width: 140px;
+        height: 140px;
+      }
+      .rwr-score-ring svg {
+        width: 140px;
+        height: 140px;
+      }
+      .rwr-score-center {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .rwr-score-num {
+        font-family: "DM Mono", monospace;
+        font-size: 38px;
+        font-weight: 500;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .rwr-score-denom {
+        font-size: 11px;
+        color: rgba(250, 248, 242, 0.35);
+        letter-spacing: 0.1em;
+        margin-top: 2px;
+      }
+      .rwr-tier-badge {
+        text-align: center;
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 10px 16px;
+        width: 100%;
+      }
+      .rwr-tier-name {
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-style: italic;
+        color: var(--gold);
+        margin-bottom: 2px;
+      }
+      .rwr-tier-sub {
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(250, 248, 242, 0.4);
+      }
+      .rwr-result-msg {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.68);
+        line-height: 1.75;
+        margin-bottom: 16px;
+      }
+      .rwr-property-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .rwr-prop {
+        border-top: 4px solid #c9a84c;
+        background: rgba(201, 168, 76, 0.05);
+        padding: 10px 10px 8px;
+        text-align: center;
+      }
+      .rwr-prop-icon {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .rwr-prop-name {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(250, 248, 242, 0.5);
+        margin-bottom: 3px;
+      }
+      .rwr-prop-val {
+        font-family: "DM Mono", monospace;
+        font-size: 13px;
+        color: var(--gold);
+      }
+      .rwr-prop.low .rwr-prop-val {
+        color: rgba(250, 100, 100, 0.8);
+      }
+      .rwr-prop.mid .rwr-prop-val {
+        color: rgba(255, 200, 80, 0.9);
+      }
+      .rwr-prop.high .rwr-prop-val {
+        color: rgba(100, 220, 100, 0.9);
+      }
+      .rwr-year-ahead {
+        padding: 20px 28px;
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+        border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        background: rgba(201, 168, 76, 0.03);
+      }
+      .rwr-year-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .rwr-year-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .rwr-year-item {
+        font-size: 12px;
+        color: rgba(250, 248, 242, 0.62);
+        padding-left: 16px;
+        position: relative;
+        line-height: 1.5;
+      }
+      .rwr-year-item::before {
+        content: "\2192";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 11px;
+      }
+      .rwr-result-ctas {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 20px 28px 10px;
+      }
+      .rwr-restart {
+        background: transparent;
+        border: none;
+        color: rgba(250, 248, 242, 0.25);
+        font-size: 11px;
+        cursor: pointer;
+        padding: 0 28px 20px;
+        letter-spacing: 0.08em;
+        display: block;
+      }
+      .rwr-restart:hover {
+        color: var(--gold);
+      }
+      @media (max-width: 768px) {
+        .rwr-q-opts {
+          grid-template-columns: 1fr;
+        }
+        .rwr-board-main {
+          grid-template-columns: 1fr;
+        }
+        .rwr-score-block {
+          flex-direction: row;
+          align-items: center;
+        }
+        .rwr-property-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .rwr-year-items {
+          grid-template-columns: 1fr;
+        }
+        .rwr-result-ctas {
+          flex-direction: column;
+        }
+        .rwr-calc-sec {
+          padding: 52px 16px;
+        }
+        .rwr-q {
+          padding: 24px 18px 16px;
+        }
+        .rwr-progress-wrap {
+          padding: 0 18px 14px;
+        }
+      }
+
+      .rwr-save-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(8, 7, 5, 0.88);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .rwr-save-card {
+        background: var(--dark);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-top: 3px solid var(--gold);
+        max-width: 420px;
+        width: 100%;
+        padding: 36px 32px;
+        text-align: center;
+      }
+      .rwr-save-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+      .rwr-save-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+      .rwr-save-msg {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.6);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .rwr-save-input {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        color: var(--white);
+        padding: 11px 14px;
+        font-size: 14px;
+        font-family: "DM Sans", sans-serif;
+        margin-bottom: 10px;
+        outline: none;
+        box-sizing: border-box;
+      }
+      .rwr-save-input:focus {
+        border-color: var(--gold);
+      }
+      .rwr-save-skip {
+        background: none;
+        border: none;
+        color: rgba(250, 248, 242, 0.3);
+        font-size: 11px;
+        cursor: pointer;
+        margin-top: 12px;
+        letter-spacing: 0.1em;
+      }
+      .rwr-save-skip:hover {
+        color: var(--gold);
+      }
+
+      .rwr-save-error {
+        background: rgba(255, 80, 80, 0.12);
+        border: 1px solid rgba(255, 80, 80, 0.3);
+        color: rgba(255, 160, 160, 0.9);
+        font-size: 12px;
+        padding: 8px 12px;
+        margin-bottom: 4px;
+        text-align: left;
+      }
+      .rwr-save-fine {
+        font-size: 10px;
+        color: rgba(250, 248, 242, 0.25);
+        margin-top: 8px;
+        letter-spacing: 0.08em;
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          padding: 96px 16px 56px;
+        }
+        .hero h1 {
+          font-size: clamp(30px, 10vw, 48px);
+        }
+        .hero-ctas {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn-gold,
+        .btn-outline {
+          text-align: center;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .get-sec,
+        .eco-sec,
+        .comp-sec,
+        .mem-sec,
+        .cta-sec,
+        .rwr-calc-sec {
+          padding: 52px 16px;
+        }
+        .get-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .eco-nodes {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .comp-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .mem-card {
+          padding: 24px 16px;
+        }
+        .rwr-board-main {
+          grid-template-columns: 1fr;
+        }
+        .rwr-score-block {
+          flex-direction: row;
+          gap: 20px;
+          align-items: center;
+        }
+        .rwr-property-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .rwr-year-items {
+          grid-template-columns: 1fr;
+        }
+        .rwr-result-ctas {
+          flex-direction: column;
+        }
+        .rwr-q-opts {
+          grid-template-columns: 1fr;
+        }
+        .rwr-q {
+          padding: 22px 16px 14px;
+        }
+        .rwr-progress-wrap {
+          padding: 0 16px 12px;
+        }
+        .rwr-save-card {
+          padding: 28px 20px;
+        }
+        .sec-title {
+          font-size: clamp(24px, 8vw, 38px);
+        }
+        .hero-pin {
+          display: none;
+        }
+      }
+      @media (max-width: 400px) {
+        .rwr-score-block {
+          flex-direction: column;
+        }
+        .rwr-property-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* &#9472;&#9472; TRIVIA GAME STYLING &#9472;&#9472; */
+      .rwr-game-badge {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.3em;
+        padding: 6px 16px;
+        margin-bottom: 16px;
+        clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      }
+      .rwr-game-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+      }
+      .rwr-game-meta span {
+        font-size: 11px;
+        color: rgba(250, 248, 242, 0.5);
+        letter-spacing: 0.1em;
+      }
+      .rwr-meta-dot {
+        font-size: 6px;
+        color: rgba(201, 168, 76, 0.4);
+      }
+      .rwr-calc-sec {
+        background: linear-gradient(
+          180deg,
+          var(--dark) 0%,
+          rgba(8, 7, 5, 1) 100%
+        );
+      }
+      .rwr-quiz {
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        position: relative;
+        overflow: hidden;
+      }
+      .rwr-quiz::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+      .rwr-q {
+        display: none;
+        padding: 32px 32px 16px;
+        animation: fade-up 0.3s ease;
+      }
+      .rwr-q.active {
+        display: block;
+      }
+      .rwr-q-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+      .rwr-q-cat-icon {
+        font-size: 18px;
+      }
+      .rwr-q-cat {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold);
+        flex: 1;
+      }
+      .rwr-q-counter {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        color: rgba(250, 248, 242, 0.3);
+        letter-spacing: 0.1em;
+      }
+      .rwr-q-text {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(17px, 2.5vw, 22px);
+        color: var(--white);
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      .rwr-q-opts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .rwr-opt {
+        background: transparent;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        color: rgba(250, 248, 242, 0.7);
+        padding: 12px 14px;
+        font-family: "DM Sans", sans-serif;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.18s;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .rwr-opt:hover {
+        border-color: var(--gold);
+        color: var(--white);
+        background: rgba(201, 168, 76, 0.07);
+      }
+      .rwr-opt:active {
+        background: rgba(201, 168, 76, 0.18);
+        transform: scale(0.98);
+      }
+      .rwr-opt-letter {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--gold);
+        background: rgba(201, 168, 76, 0.12);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .rwr-opt-text {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+      .rwr-opt.selected {
+        border-color: var(--gold);
+        background: rgba(201, 168, 76, 0.14);
+      }
+      .rwr-opt.selected .rwr-opt-letter {
+        background: var(--gold);
+        color: var(--black);
+      }
+      /* Round dots */
+      .rwr-progress-wrap {
+        padding: 12px 32px 18px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-top: 1px solid rgba(201, 168, 76, 0.08);
+      }
+      .rwr-round-dots {
+        display: flex;
+        gap: 6px;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+      .rwr-dot {
+        width: 20px;
+        height: 6px;
+        background: rgba(201, 168, 76, 0.12);
+        border-radius: 0;
+        transition: all 0.3s;
+        flex-shrink: 0;
+      }
+      .rwr-dot.active {
+        background: var(--gold);
+      }
+      .rwr-dot.done {
+        background: rgba(201, 168, 76, 0.35);
+      }
+      @media (max-width: 600px) {
+        .rwr-q-opts {
+          grid-template-columns: 1fr;
+        }
+        .rwr-q {
+          padding: 22px 16px 12px;
+        }
+        .rwr-progress-wrap {
+          padding: 10px 16px 14px;
+        }
+        .rwr-dot {
+          width: 14px;
+          height: 5px;
+        }
+        .rwr-game-meta {
+          gap: 8px;
+        }
+      }
+
+      /* &#9472;&#9472; DIASPORA STATS &#9472;&#9472; */
+      .diaspora-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+        margin: 0;
+      }
+      .ds-stat {
+        background: rgba(13, 11, 8, 0.6);
+        border: 1px solid rgba(201, 168, 76, 0.18);
+        border-top: 3px solid rgba(201, 168, 76, 0.8);
+        padding: 28px 20px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .ds-stat:hover {
+        transform: translateY(-4px);
+      }
+      .ds-num {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(22px, 3vw, 34px);
+        font-weight: 700;
+        color: #c9a84c;
+        margin-bottom: 10px;
+        line-height: 1;
+      }
+      .ds-label {
+        font-size: 11px;
+        color: rgba(250, 248, 242, 0.55);
+        letter-spacing: 0.06em;
+        line-height: 1.6;
+        text-transform: uppercase;
+      }
+      .ds-sec {
+        padding: 48px 24px 64px;
+        background: #0a0807;
+      }
+      .ds-sec-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .ds-eyebrow {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #c9a84c;
+        margin-bottom: 12px;
+      }
+      .ds-heading {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;
+        color: #faf8f2;
+        margin-bottom: 36px;
+        line-height: 1.2;
+      }
+      .ds-heading em {
+        color: #c9a84c;
+        font-style: italic;
+      }
+      @media (max-width: 768px) {
+        .diaspora-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .diaspora-stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hidden Netlify form for quiz score capture -->
+    <form
+      name="rwr-quiz-results"
+      netlify
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      style="display: none"
+    >
+      <input type="hidden" name="form-name" value="rwr-quiz-results" />
+      <input name="bot-field" />
+      <input name="email" type="email" />
+      <input name="name" type="text" />
+      <input name="score" type="text" />
+      <input name="tier" type="text" />
+      <input name="properties" type="text" />
+    </form>
+
+    <!-- Email gate - no skip allowed -->
+    <div class="rwr-save-overlay" id="rwr-save-overlay" style="display: none">
+      <div class="rwr-save-card">
+        <div class="rwr-save-icon">&#128202;</div>
+        <div class="rwr-save-title">Your Results Are Ready</div>
+        <p class="rwr-save-msg">
+          Enter your email to unlock your Remote Work Ready&#8482; Score and
+          personalized roadmap.
+        </p>
+        <input
+          type="text"
+          id="save-name"
+          placeholder="Your first name"
+          class="rwr-save-input"
+          autocomplete="given-name"
+        />
+        <input
+          type="email"
+          id="save-email"
+          placeholder="Your email address"
+          class="rwr-save-input"
+          autocomplete="email"
+        />
+        <div
+          class="rwr-save-error"
+          id="rwr-save-error"
+          style="display: none"
+        ></div>
+        <button
+          class="btn-gold"
+          style="width: 100%; margin-top: 8px"
+          onclick="submitRwrScore()"
+        >
+          Unlock My Results &#8594;
+        </button>
+        <p class="rwr-save-fine">
+          No spam. Just your score and what to do next.
+        </p>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-brand">
+        <div class="nav-logo">Afro <em>Adventurer</em>&#8482;</div>
+        <div class="nav-pill">Ecosystem</div>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="back-link">&#8592; Main Site</a>
+        <a
+          href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta"
+          >Join Now &#8594;</a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-pin">&#9679; Now Accepting Members &#9679;</div>
+      <h1>Remote Work<br />Ready<span class="hero-tm">&#8482;</span></h1>
+      <p class="hero-sub">
+        Human-vetted remote job alerts. Real travel deals. A professional
+        community that works as hard as you do. Delivered weekly. No spam. No
+        fluff.
+      </p>
+      <div class="hero-ctas">
+        <a
+          href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gold"
+          >Join the Membership &#8594;</a
+        >
+        <a
+          href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline"
+          >See What&#8217;s Inside</a
+        >
+      </div>
+    </section>
+
+    <!-- DIASPORA STATS -->
+    <section class="ds-sec">
+      <div class="ds-sec-inner">
+        <div class="reveal">
+          <div class="ds-eyebrow">The Numbers Don&#8217;t Lie</div>
+          <h2 class="ds-heading">
+            Why diaspora professionals are <em>choosing to move.</em>
+          </h2>
+          <div class="diaspora-stats">
+            <div class="ds-stat" data-target="87" data-suffix="%">
+              <div class="ds-num" id="rwr-ds0">0%</div>
+              <div class="ds-label">
+                of Black expats report higher life satisfaction within 18 months
+                of relocating
+              </div>
+            </div>
+            <div
+              class="ds-stat"
+              data-target="2400"
+              data-prefix="$"
+              data-suffix="/mo"
+            >
+              <div class="ds-num" id="rwr-ds1">$0/mo</div>
+              <div class="ds-label">
+                average monthly savings vs. US cost of living for diaspora
+                nomads
+              </div>
+            </div>
+            <div class="ds-stat" data-target="43" data-suffix=" countries">
+              <div class="ds-num" id="rwr-ds2">0 countries</div>
+              <div class="ds-label">
+                now offer digital nomad or remote work visas &#8212; up from 3
+                in 2019
+              </div>
+            </div>
+            <div class="ds-stat" data-target="1" data-suffix=" in 4">
+              <div class="ds-num" id="rwr-ds3">0 in 4</div>
+              <div class="ds-label">
+                Black professionals say they&#8217;ve seriously considered
+                leaving the US permanently
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM ROADMAP -->
+    <section class="eco-sec" id="ecosystem">
+      <div class="sec-inner">
+        <div
+          class="reveal"
+          style="text-align: center; max-width: 680px; margin: 0 auto 20px"
+        >
+          <div class="eyebrow" style="justify-content: center">
+            <span>&#9679;</span> The Full Ecosystem <span>&#9679;</span>
+          </div>
+          <h2 class="sec-title">
+            One entry point.<br /><em>An entire infrastructure.</em>
+          </h2>
+          <p class="sec-body" style="margin: 0 auto">
+            Remote Work Ready&#8482; is your first stamp in your passport. The
+            Afro Adventurer&#8482; ecosystem is the entire journey.
+          </p>
+        </div>
+
+        <!-- Visual map connector -->
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 48px 0 40px;
+          "
+        >
+          <div class="eco-hub reveal">
+            <div class="eco-hub-label">Afro Adventurer&#8482;</div>
+            <div class="eco-hub-name">Global<br />Ecosystem</div>
+          </div>
+          <div
+            style="
+              width: 2px;
+              height: 48px;
+              background: linear-gradient(to bottom, var(--gold), transparent);
+            "
+          ></div>
+        </div>
+
+        <div class="eco-nodes reveal">
+          <div class="eco-node active">
+            <div class="eco-node-icon">&#128241;</div>
+            <div class="eco-node-status now">&#9679; Active Now</div>
+            <div class="eco-node-name">Remote Work Ready&#8482;</div>
+            <div class="eco-node-desc">
+              WhatsApp membership delivering weekly vetted job alerts, travel
+              deals, live coworking, and access to a professional network that
+              opens doors. Your entry point into the ecosystem.
+            </div>
+            <a
+              href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="eco-node-link"
+              >Join Now &#8594;</a
+            >
+          </div>
+          <div class="eco-node">
+            <div class="eco-node-icon">&#127979;</div>
+            <div class="eco-node-status soon">&#9679; Coming Soon</div>
+            <div class="eco-node-name">Afro Adventurer Academy&#8482;</div>
+            <div class="eco-node-desc">
+              A structured 6-pillar cohort training program covering financial
+              freedom, global careers, mobility &amp; citizenship, wealth
+              systems, language, and medical tourism. The full curriculum.
+            </div>
+            <a href="waitlist.html" class="eco-node-link"
+              >Join Waitlist &#8594;</a
+            >
+          </div>
+          <div class="eco-node">
+            <div class="eco-node-icon">&#127759;</div>
+            <div class="eco-node-status active">&#9679; Active Now</div>
+            <div class="eco-node-name">Passport to Profit&#8482;</div>
+            <div class="eco-node-desc">
+              1-on-1 private coaching for professionals ready to move fast.
+              LinkedIn audits, remote career strategy, relocation planning, and
+              full Plan B roadmaps. Direct access to Quiana.
+            </div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="eco-node-link"
+              >Book a Session &#8594;</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="get-sec" id="what-you-get">
+      <div class="sec-inner">
+        <div class="reveal">
+          <div class="eyebrow">What&#8217;s Inside</div>
+          <h2 class="sec-title">Four pillars.<br /><em>One membership.</em></h2>
+          <p class="sec-body">
+            Everything inside Remote Work Ready&#8482; is curated by hand. No
+            scraped job boards. No generic newsletters. No noise.
+          </p>
+        </div>
+        <div class="get-grid reveal">
+          <div class="get-card">
+            <span class="get-icon">&#128269;</span>
+            <div class="get-num">01 &#8212; Opportunities</div>
+            <div class="get-title">Human-Vetted Remote Job Alerts</div>
+            <div class="get-desc">
+              Every role we share is reviewed before it hits your feed. Real
+              companies, real remote roles, filtered for the diaspora
+              professional who is done wasting time on spam listings and
+              bait-and-switch postings.
+            </div>
+            <span class="get-tag">Delivered via WhatsApp</span>
+          </div>
+          <div class="get-card">
+            <span class="get-icon">&#9992;&#65039;</span>
+            <div class="get-num">02 &#8212; Travel</div>
+            <div class="get-title">Curated Travel Deal Drops</div>
+            <div class="get-desc">
+              Flight deals, accommodation finds, and destination intel curated
+              for professionals who want to move strategically &#8212; not just
+              vacation. Africa-forward, globally aware.
+            </div>
+            <span class="get-tag">Time-sensitive drops</span>
+          </div>
+          <div class="get-card">
+            <span class="get-icon">&#127758;</span>
+            <div class="get-num">03 &#8212; Community</div>
+            <div class="get-title">Vetted Professional Network</div>
+            <div class="get-desc">
+              Referrals. Housing swaps. Travel partners. Business co-founders.
+              Co-working connections. This is the community that opens doors
+              &#8212; because everyone in it is building something real.
+            </div>
+            <span class="get-tag">Members only access</span>
+          </div>
+          <div class="get-card">
+            <span class="get-icon">&#127979;</span>
+            <div class="get-num">04 &#8212; Live Sessions</div>
+            <div class="get-title">Coworking &amp; Monthly Upskill</div>
+            <div class="get-desc">
+              Live virtual coworking sessions to stay accountable and connected.
+              Monthly upskill workshops on remote careers, financial tools, and
+              global mobility &#8212; delivered by practitioners, not theorists.
+            </div>
+            <span class="get-tag">Live + recorded access</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="cmp-sec" id="comparison">
+      <div class="sec-inner">
+        <div class="reveal">
+          <div class="eyebrow">The Difference</div>
+          <h2 class="sec-title">
+            Building alone<br /><em>vs. building with us.</em>
+          </h2>
+        </div>
+        <div class="cmp-grid reveal">
+          <div class="cmp-col alone">
+            <div class="cmp-head">&#128683; On Your Own</div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >Sifting through hundreds of job boards daily, unsure
+                what&#8217;s real</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >Missing flight deals because you didn&#8217;t know where to
+                look</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >No one to call when you need a referral or a housing connection
+                abroad</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >Upskilling in isolation with no accountability or expert
+                access</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >Googling visa rules at 2am and still not sure what applies to
+                you</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8212;</span
+              ><span class="cmp-text"
+                >Consuming content about freedom without a structured path to
+                it</span
+              >
+            </div>
+          </div>
+          <div class="cmp-col together">
+            <div class="cmp-head">&#10003; With Remote Work Ready&#8482;</div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >Vetted remote roles delivered directly &#8212; filtered, real,
+                and relevant</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >Travel deal drops curated by someone who actually travels
+                strategically</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >A network of professionals who refer, host, partner, and
+                co-create</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >Live coworking and monthly sessions to stay sharp and
+                connected</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >Community intelligence from people who have already made the
+                moves</span
+              >
+            </div>
+            <div class="cmp-item">
+              <span class="cmp-icon">&#8594;</span
+              ><span class="cmp-text"
+                >A clear path from membership &#8594; academy &#8594; private
+                coaching</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMOTE WORK READY SCORE CALCULATOR -->
+    <section class="rwr-calc-sec">
+      <div class="rwr-calc-inner">
+        <div class="rwr-calc-header reveal">
+          <div class="rwr-game-badge">&#127759; THE READINESS CHECK</div>
+          <h2 class="sec-title">
+            Are You Actually<br /><em>Remote Work Ready?</em>
+          </h2>
+          <p class="sec-body" style="margin: 0 auto 12px">
+            12 rounds. No right or wrong answers. Just the truth about where you
+            are &#8212; and exactly what it takes to get where you want to go.
+          </p>
+          <div class="rwr-game-meta">
+            <span>&#9201; ~3 min</span>
+            <span class="rwr-meta-dot">&#9679;</span>
+            <span>&#127775; 12 Questions</span>
+            <span class="rwr-meta-dot">&#9679;</span>
+            <span>&#127942; Personalized Score</span>
+          </div>
+        </div>
+
+        <div class="rwr-calc-body">
+          <!-- QUIZ PANEL -->
+          <div class="rwr-quiz" id="rwr-quiz">
+            <div class="rwr-q-track">
+              <div class="rwr-q active" id="rq-0">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128188;</span
+                  ><span class="rwr-q-cat">Work Status</span
+                  ><span class="rwr-q-counter">Round 1 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  What is your current work situation?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(0, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >Fully in-office &#8212; no flexibility</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(0, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >Hybrid &#8212; some days remote</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(0, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >Remote but tied to a US timezone</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(0, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >Fully remote with flexible hours</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-1">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128203;</span
+                  ><span class="rwr-q-cat">Remote Applications</span
+                  ><span class="rwr-q-counter">Round 2 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  How many remote roles did you apply to last month?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(1, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >Zero &#8212; I haven&#8217;t started yet</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(1, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text">1&#8211;3 applications</span>
+                  </button>
+                  <button onclick="rwrAnswer(1, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text">4&#8211;10 applications</span>
+                  </button>
+                  <button onclick="rwrAnswer(1, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >10+ applications, actively searching</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-2">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128279;</span
+                  ><span class="rwr-q-cat">LinkedIn Readiness</span
+                  ><span class="rwr-q-counter">Round 3 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  Does your LinkedIn profile currently attract remote or global
+                  employers?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(2, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >No &#8212; it&#8217;s not set up for remote at all</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(2, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >Somewhat, but I haven&#8217;t optimized it</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(2, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve made changes but unsure if it&#8217;s
+                      working</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(2, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >Yes &#8212; I&#8217;m getting inbound remote
+                      interest</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-3">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128176;</span
+                  ><span class="rwr-q-cat">Financial Runway</span
+                  ><span class="rwr-q-counter">Round 4 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  If you moved abroad today, how many months could you sustain
+                  yourself?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(3, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >Less than 1 month &#8212; not financially ready</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(3, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >1&#8211;3 months of runway</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(3, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >3&#8211;6 months of runway</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(3, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >6+ months &#8212; I&#8217;m financially prepared</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-4">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128200;</span
+                  ><span class="rwr-q-cat">Salary Awareness</span
+                  ><span class="rwr-q-counter">Round 5 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  Do you know what remote workers in your field earn globally
+                  vs. in the US?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(4, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >No idea &#8212; I&#8217;ve never researched this</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(4, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve seen some ranges but nothing concrete</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(4, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I know approximate ranges for my field</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(4, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >Yes &#8212; I know exactly what to negotiate for</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-5">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#127968;</span
+                  ><span class="rwr-q-cat">City Knowledge</span
+                  ><span class="rwr-q-counter">Round 6 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  How well do you know the cost of living in your target city
+                  abroad?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(5, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >I haven&#8217;t picked a city yet</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(5, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I have a city in mind but no real numbers</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(5, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve researched costs roughly</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(5, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >I have a detailed monthly budget ready</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-6">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128706;</span
+                  ><span class="rwr-q-cat">Visa IQ</span
+                  ><span class="rwr-q-counter">Round 7 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  How familiar are you with digital nomad and remote worker visa
+                  options?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(6, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text">Completely unfamiliar</span>
+                  </button>
+                  <button onclick="rwrAnswer(6, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve heard about them but know no details</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(6, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I know 1&#8211;2 countries&#8217; options</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(6, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve researched multiple and have a target</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-7">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#127758;</span
+                  ><span class="rwr-q-cat">Diaspora Network</span
+                  ><span class="rwr-q-counter">Round 8 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  How strong is your professional network in the African
+                  diaspora or globally?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(7, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >I have no diaspora or international connections</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(7, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >A few online follows but no real relationships</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(7, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >Some active connections in 1&#8211;2 countries</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(7, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >A strong vetted network across multiple regions</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-8">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128101;</span
+                  ><span class="rwr-q-cat">Community Access</span
+                  ><span class="rwr-q-counter">Round 9 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  Are you currently part of any Black or brown remote work or
+                  diaspora community?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(8, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >No &#8212; I don&#8217;t know any that exist</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(8, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I follow some accounts but I&#8217;m not active</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(8, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;m in a group but rarely engage</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(8, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >Yes &#8212; actively engaged and getting real value</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-9">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#9889;</span
+                  ><span class="rwr-q-cat">Accountability</span
+                  ><span class="rwr-q-counter">Round 10 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  When you set a goal around remote work or relocation, what
+                  usually happens?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(9, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >I research a lot but rarely take action</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(9, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I start strong but lose momentum alone</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(9, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I make progress but need external structure</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(9, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >I follow through &#8212; I just need the right
+                      tools</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-10">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#128179;</span
+                  ><span class="rwr-q-cat">Income Diversification</span
+                  ><span class="rwr-q-counter">Round 11 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  Do you have any income streams beyond your primary job?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(10, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >No &#8212; 100% dependent on one employer</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(10, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;ve thought about it but haven&#8217;t
+                      started</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(10, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >I have a side income but it&#8217;s inconsistent</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(10, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >Yes &#8212; I have multiple income streams</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="rwr-q" id="rq-11">
+                <div class="rwr-q-meta">
+                  <span class="rwr-q-cat-icon">&#127942;</span
+                  ><span class="rwr-q-cat">Commitment Level</span
+                  ><span class="rwr-q-counter">Round 12 of 12</span>
+                </div>
+                <div class="rwr-q-text">
+                  Which statement best describes where you are right now?
+                </div>
+                <div class="rwr-q-opts">
+                  <button onclick="rwrAnswer(11, 1)" class="rwr-opt">
+                    <span class="rwr-opt-letter">A</span
+                    ><span class="rwr-opt-text"
+                      >Curious but not sure this is for me yet</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(11, 2)" class="rwr-opt">
+                    <span class="rwr-opt-letter">B</span
+                    ><span class="rwr-opt-text"
+                      >Motivated but overwhelmed by where to start</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(11, 3)" class="rwr-opt">
+                    <span class="rwr-opt-letter">C</span
+                    ><span class="rwr-opt-text"
+                      >Ready &#8212; I just need structure and community</span
+                    >
+                  </button>
+                  <button onclick="rwrAnswer(11, 4)" class="rwr-opt">
+                    <span class="rwr-opt-letter">D</span
+                    ><span class="rwr-opt-text"
+                      >I&#8217;m committed and looking for my next step
+                      today</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rwr-progress-wrap">
+              <div class="rwr-round-dots" id="rwr-dots">
+                <span class="rwr-dot active" id="rdot-0"></span
+                ><span class="rwr-dot" id="rdot-1"></span
+                ><span class="rwr-dot" id="rdot-2"></span
+                ><span class="rwr-dot" id="rdot-3"></span
+                ><span class="rwr-dot" id="rdot-4"></span
+                ><span class="rwr-dot" id="rdot-5"></span
+                ><span class="rwr-dot" id="rdot-6"></span
+                ><span class="rwr-dot" id="rdot-7"></span
+                ><span class="rwr-dot" id="rdot-8"></span
+                ><span class="rwr-dot" id="rdot-9"></span
+                ><span class="rwr-dot" id="rdot-10"></span
+                ><span class="rwr-dot" id="rdot-11"></span>
+              </div>
+              <div class="rwr-progress-label" id="rwr-progress-label">
+                Round 1 of 12
+              </div>
+            </div>
+          </div>
+
+          <!-- RESULT PANEL -->
+          <div class="rwr-result" id="rwr-result" style="display: none">
+            <!-- MONOPOLY BOARD STYLE SCORE CARD -->
+            <div class="rwr-board">
+              <div class="rwr-board-header">
+                <div class="rwr-board-eyebrow">
+                  &#127922; Your Remote Work Ready&#8482; Report
+                </div>
+              </div>
+              <div class="rwr-board-main">
+                <div class="rwr-score-block">
+                  <div class="rwr-score-ring">
+                    <svg viewBox="0 0 140 140">
+                      <circle
+                        cx="70"
+                        cy="70"
+                        r="58"
+                        fill="none"
+                        stroke="rgba(201,168,76,0.1)"
+                        stroke-width="10"
+                      />
+                      <circle
+                        cx="70"
+                        cy="70"
+                        r="58"
+                        fill="none"
+                        stroke="#C9A84C"
+                        stroke-width="10"
+                        stroke-dasharray="364"
+                        stroke-dashoffset="364"
+                        stroke-linecap="round"
+                        transform="rotate(-90 70 70)"
+                        id="rwr-ring"
+                        style="
+                          transition: stroke-dashoffset 1.4s
+                            cubic-bezier(0.4, 0, 0.2, 1);
+                        "
+                      />
+                    </svg>
+                    <div class="rwr-score-center">
+                      <div class="rwr-score-num" id="rwr-score-num">0</div>
+                      <div class="rwr-score-denom">/ 48</div>
+                    </div>
+                  </div>
+                  <div class="rwr-tier-badge" id="rwr-tier-badge">
+                    <div class="rwr-tier-name" id="rwr-tier">Loading...</div>
+                    <div class="rwr-tier-sub" id="rwr-tier-sub">Your Path</div>
+                  </div>
+                </div>
+
+                <div class="rwr-board-right">
+                  <p class="rwr-result-msg" id="rwr-msg"></p>
+
+                  <!-- Monopoly-style property cards for each strength area -->
+                  <div class="rwr-property-row" id="rwr-properties"></div>
+                </div>
+              </div>
+
+              <!-- Year Ahead -->
+              <div class="rwr-year-ahead">
+                <div class="rwr-year-title">
+                  &#128197; Your Year Ahead With Remote Work Ready&#8482;
+                </div>
+                <div class="rwr-year-items" id="rwr-year-items"></div>
+              </div>
+
+              <!-- CTAs -->
+              <div class="rwr-result-ctas">
+                <a
+                  href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-gold"
+                  >&#128200; Improve My Score &#8594;</a
+                >
+                <a
+                  href="https://calendly.com/berry-quiana/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline"
+                  >Book 1-on-1 Coaching</a
+                >
+              </div>
+              <button class="rwr-restart" onclick="rwrRestart()">
+                &#8635; Retake the Assessment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP DETAILS -->
+    <section class="mem-sec" id="membership">
+      <div class="sec-inner" style="text-align: center">
+        <div class="reveal">
+          <div class="eyebrow" style="justify-content: center">Membership</div>
+          <h2 class="sec-title">Simple. <em>Structured. Serious.</em></h2>
+          <p class="sec-body" style="margin: 0 auto">
+            One membership. Four pillars of value. A community that compounds
+            over time.
+          </p>
+        </div>
+        <div class="mem-card reveal">
+          <div class="eyebrow">Remote Work Ready&#8482;</div>
+          <div class="mem-price-row">
+            <div class="mem-see-inside">Se&#x65;&#128064; Inside</div>
+          </div>
+          <p
+            style="
+              font-size: 14px;
+              color: rgba(250, 248, 242, 0.5);
+              margin-bottom: 8px;
+            "
+          >
+            Full pricing and membership tiers available on our offerings page.
+          </p>
+          <ul class="mem-includes">
+            <li>Weekly human-vetted remote job alerts via WhatsApp</li>
+            <li>
+              Curated travel deal drops &#8212; Africa-forward, globally sourced
+            </li>
+            <li>
+              Access to vetted professional community (referrals, housing,
+              partners)
+            </li>
+            <li>Live virtual coworking sessions</li>
+            <li>Monthly upskill workshop access</li>
+            <li>Priority access to Afro Adventurer Academy&#8482; waitlist</li>
+          </ul>
+          <a
+            href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold"
+            style="width: 100%; display: block; text-align: center"
+            >View Full Membership Details &#8594;</a
+          >
+          <div class="mem-note">
+            Remote Work Ready&#8482; is a curated membership and professional
+            community. It does not guarantee job placement, interview selection,
+            or employment outcomes. Opportunities shared are sourced and
+            reviewed for relevance but are subject to change at the discretion
+            of hiring companies. See full disclaimer below.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="close-sec">
+      <div style="position: relative; z-index: 1">
+        <div class="eyebrow reveal">&#9679; Your First Move &#9679;</div>
+        <h2 class="close-title reveal">
+          The world is open.<br /><em>Come prepared.</em>
+        </h2>
+        <p class="close-sub reveal">
+          Remote Work Ready&#8482; is the infrastructure you wish existed when
+          you first started looking. It exists now. Join the community that is
+          already moving.
+        </p>
+        <div
+          class="reveal"
+          style="
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="https://gamma.app/docs/Your-Passport-to-Freedom-4rt76nfetb5gq00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold"
+            >Join Remote Work Ready&#8482; &#8594;</a
+          >
+          <a href="waitlist.html" class="btn-outline"
+            >Join Academy Waitlist &#8594;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="disc-sec">
+      <div class="sec-inner">
+        <div class="disc-box reveal">
+          <div class="disc-title">&#9679; Legal Disclaimer</div>
+          <div class="disc-text">
+            Remote Work Ready&#8482; is a curated information and community
+            membership service operated under Afro Adventurer&#8482;. Membership
+            provides access to curated remote job alerts, travel opportunities,
+            professional community features, and live educational sessions.
+            <strong style="color: rgba(250, 248, 242, 0.55)"
+              >Membership does not constitute a staffing agency, employment
+              agency, or placement service, and does not guarantee job
+              interviews, job placement, or employment of any kind.</strong
+            >
+            All opportunities shared are independently sourced and are subject
+            to availability and the discretion of the hiring organization. Afro
+            Adventurer&#8482; is not responsible for the hiring decisions of
+            third-party employers. Members are encouraged to conduct independent
+            due diligence on all opportunities. Remote Work Ready&#8482; and
+            Afro Adventurer&#8482; are trademarks. &#169; 2026 Afro
+            Adventurer&#8482;. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">
+        Afro <em>Adventurer</em>&#8482; &mdash; Remote Work Ready&#8482;
+      </div>
+      <div class="footer-note">
+        &#169; 2026 Afro Adventurer&#8482;. All rights reserved.
+        &nbsp;&middot;&nbsp;
+        <a href="index.html" style="color: var(--gold); text-decoration: none"
+          >Back to Main Site</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      var obs = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("on");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        obs.observe(el);
+      });
+    </script>
+
+    <script>
+      var rwrScores = new Array(12).fill(0);
+      var rwrCurrent = 0;
+      var rwrTotal = 12;
+
+      function rwrAnswer(q, score) {
+        rwrScores[q] = score;
+        // Highlight selected
+        var opts = document.querySelectorAll(
+          "#rq-" + q + " .rwr-q-opts button",
+        );
+        opts.forEach(function (b, i) {
+          b.style.borderColor = i === score - 1 ? "var(--gold)" : "";
+          b.style.background = i === score - 1 ? "rgba(201,168,76,0.14)" : "";
+        });
+        setTimeout(function () {
+          rwrCurrent++;
+          var pct = (rwrCurrent / rwrTotal) * 100;
+          document.getElementById("rwr-progress-label").textContent =
+            rwrCurrent < rwrTotal
+              ? "Round " + (rwrCurrent + 1) + " of " + rwrTotal
+              : "Complete &#127942;";
+          // Update dots
+          var prevDot = document.getElementById("rdot-" + q);
+          if (prevDot) {
+            prevDot.classList.remove("active");
+            prevDot.classList.add("done");
+          }
+          if (rwrCurrent < rwrTotal) {
+            var nd = document.getElementById("rdot-" + rwrCurrent);
+            if (nd) nd.classList.add("active");
+          }
+          if (rwrCurrent < rwrTotal) {
+            document.getElementById("rq-" + q).classList.remove("active");
+            document.getElementById("rq-" + (q + 1)).classList.add("active");
+          } else {
+            showRwrResult();
+          }
+        }, 220);
+      }
+
+      var rwrTiers = [
+        {
+          min: 0,
+          max: 19,
+          name: "Just Getting Started",
+          sub: "Your Journey Begins Here",
+          msg: "You're at the starting line  -  and that's exactly where this community is built to meet you. The gap between where you are and where you want to be isn't talent or luck. It's information, structure, and the right people around you.",
+          items: [
+            "Get your LinkedIn remote-ready in 30 days",
+            "Access your first vetted remote job alerts",
+            "Join live coworking for structure & accountability",
+            "Connect with members already living where you want to go",
+            "Book a 1-on-1 to map your 90-day action plan",
+            "Learn which cities match your income and lifestyle",
+            "Understand your visa options with expert guidance",
+          ],
+        },
+        {
+          min: 20,
+          max: 28,
+          name: "Building the Foundation",
+          sub: "Momentum Is Forming",
+          msg: "You have awareness and some pieces in place. What's missing is the vetted opportunities, the accountability, and a community that keeps you moving. You're closer than you think  -  this phase is where most people plateau without the right support.",
+          items: [
+            "Receive weekly vetted remote job drops in your field",
+            "Connect with diaspora professionals in your target city",
+            "Monthly upskill sessions on salary negotiation & relocation",
+            "Get matched with a community accountability partner",
+            "Use city playbooks to make your financial plan concrete",
+            "Access housing and banking referrals through our network",
+            "Join group sessions with others at your exact stage",
+          ],
+        },
+        {
+          min: 29,
+          max: 36,
+          name: "Gaining Real Traction",
+          sub: "You're Closer Than You Think",
+          msg: "You're building momentum but still navigating this largely alone. The missing piece isn't information  -  it's the right room. Access to real opportunities, vetted community, and accountability is what separates people who research forever from people who actually move.",
+          items: [
+            "Get direct access to high-quality remote roles weekly",
+            "Join a live cohort with others executing on similar timelines",
+            "Weekly accountability check-ins with your community",
+            "Negotiate your remote salary with community guidance",
+            "Access our diaspora professional introductions network",
+            "Finalize your relocation playbook with expert input",
+            "Private coaching session to break through your sticking point",
+          ],
+        },
+        {
+          min: 37,
+          max: 48,
+          name: "Remote Work Ready&#8482;",
+          sub: "Your Next Move Is the Big One",
+          msg: "You're positioned. The question isn't whether you can do this  -  it's whether you're surrounded by people who will hold you to the highest version of your plan. At this level, community and accountability are the ultimate leverage.",
+          items: [
+            "Access our highest-quality vetted remote roles and consulting leads",
+            "Get referrals into diaspora professional networks abroad",
+            "Join private cohort sessions with others at your level",
+            "Deep-dive Passport to Profit session with Quiana",
+            "Connect directly with housing, banking & legal partners",
+            "Leverage the community to accelerate your first 90 days abroad",
+            "Build your long-term wealth strategy with diaspora investors",
+          ],
+        },
+      ];
+
+      var rwrProps = [
+        { icon: "&#128188;", name: "Remote Status", qs: [0] },
+        { icon: "&#128101;", name: "Network Strength", qs: [3, 8] },
+        { icon: "&#128200;", name: "Financial Clarity", qs: [2, 7] },
+        { icon: "&#127760;", name: "Global Knowledge", qs: [6, 10] },
+        { icon: "&#9889;", name: "Commitment Level", qs: [4, 9] },
+        { icon: "&#128270;", name: "Opportunity Access", qs: [5, 11] },
+      ];
+
+      function propLevel(score, max) {
+        var pct = score / max;
+        if (pct < 0.4) return "low";
+        if (pct < 0.75) return "mid";
+        return "high";
+      }
+      function propLabel(lvl) {
+        return lvl === "low"
+          ? "Needs Work"
+          : lvl === "mid"
+            ? "Developing"
+            : "Strong";
+      }
+
+      function showRwrResult() {
+        var total = rwrScores.reduce(function (a, b) {
+          return a + b;
+        }, 0);
+        var maxScore = rwrTotal * 4;
+        var qz = document.getElementById("rwr-quiz");
+        if (qz) qz.style.display = "none";
+        // Show email gate FIRST before revealing results
+        var ov = document.getElementById("rwr-save-overlay");
+        if (ov) ov.style.display = "flex";
+        var result = document.getElementById("rwr-result");
+        result.style.display = "block";
+        result.style.filter = "blur(8px)";
+        result.style.pointerEvents = "none";
+
+        // Animate ring
+        var pct = total / maxScore;
+        setTimeout(function () {
+          document.getElementById("rwr-ring").style.strokeDashoffset =
+            364 * (1 - pct);
+          document.getElementById("rwr-score-num").textContent = total;
+        }, 150);
+
+        // Tier
+        var tier = rwrTiers[0];
+        for (var t of rwrTiers) {
+          if (total >= t.min && total <= t.max) {
+            tier = t;
+            break;
+          }
+        }
+        document.getElementById("rwr-tier").innerHTML = tier.name;
+        document.getElementById("rwr-tier-sub").textContent = tier.sub;
+        document.getElementById("rwr-msg").textContent = tier.msg;
+
+        // Property cards
+        var propHTML = "";
+        rwrProps.forEach(function (p) {
+          var s = p.qs.reduce(function (a, i) {
+            return a + (rwrScores[i] || 0);
+          }, 0);
+          var mx = p.qs.length * 4;
+          var lvl = propLevel(s, mx);
+          propHTML +=
+            '<div class="rwr-prop ' +
+            lvl +
+            '"><div class="rwr-prop-icon">' +
+            p.icon +
+            '</div><div class="rwr-prop-name">' +
+            p.name +
+            '</div><div class="rwr-prop-val">' +
+            propLabel(lvl) +
+            "</div></div>";
+        });
+        document.getElementById("rwr-properties").innerHTML = propHTML;
+
+        // Year ahead items
+        document.getElementById("rwr-year-items").innerHTML = tier.items
+          .map(function (i) {
+            return '<div class="rwr-year-item">' + i + "</div>";
+          })
+          .join("");
+
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+        // email gate shown immediately above
+      }
+
+      function rwrRestart() {
+        rwrScores = new Array(rwrTotal).fill(0);
+        rwrCurrent = 0;
+        var fillEl = document.getElementById("rwr-fill");
+        if (fillEl) fillEl.style.width = "0%";
+        document.getElementById("rwr-progress-label").textContent =
+          "Question 1 of " + rwrTotal;
+        document.querySelectorAll(".rwr-q").forEach(function (q) {
+          q.classList.remove("active");
+        });
+        document.querySelectorAll(".rwr-dot").forEach(function (d) {
+          d.classList.remove("active", "done");
+        });
+        var fd = document.getElementById("rdot-0");
+        if (fd) fd.classList.add("active");
+        document.getElementById("rq-0").classList.add("active");
+        document.getElementById("rwr-quiz").style.display = "block";
+        document.getElementById("rwr-result").style.display = "none";
+      }
+
+      function validateEmail(email) {
+        if (!email)
+          return { ok: false, reason: "Please enter your email address." };
+        if (!/^[^\s@]+@[^\s@]{2,}\.[a-zA-Z]{2,}$/.test(email))
+          return { ok: false, reason: "Please enter a valid email address." };
+        var parts = email.toLowerCase().split("@");
+        var localRaw = parts[0];
+        var domain = parts[1];
+        var tld = domain.split(".").pop();
+        var local = localRaw.split("+")[0];
+        if (!local || local.length < 1)
+          return { ok: false, reason: "Please enter a valid email address." };
+        if (localRaw.includes("+")) {
+          var base = local;
+          if (
+            base.length < 2 ||
+            /^(a|b|c|x|y|z|1|2|3|test|fake|spam|nope)$/i.test(base)
+          )
+            return {
+              ok: false,
+              reason: "Please use your real email address without aliases.",
+            };
+        }
+        if (!domain.includes("."))
+          return { ok: false, reason: "Please enter a valid email address." };
+        if (!/^[a-z]{2,6}$/.test(tld))
+          return { ok: false, reason: "Please enter a valid email address." };
+        var roleAddresses =
+          /^(info|admin|support|help|contact|hello|hi|hey|sales|marketing|billing|noreply|no-reply|donotreply|webmaster|postmaster|hostmaster|abuse|team|office|mail|email|enquiries|enquiry|hr|jobs|careers|media|press|legal|privacy|security|it|ops|devops|bot|automated)$/i;
+        if (roleAddresses.test(local))
+          return {
+            ok: false,
+            reason:
+              "Please use your personal email address, not a team or role inbox.",
+          };
+        var fakeLocals =
+          /^(test|asdf|qwerty|aaa|bbb|ccc|xxx|yyy|zzz|fake|noemail|nope|null|undefined|admin123|user123|example|sample|dummy|nobody|someone|random|blah|bleh|foo|bar|baz)/i;
+        if (fakeLocals.test(local))
+          return { ok: false, reason: "Please use your real email address." };
+        var disposable = [
+          "mailinator.com",
+          "guerrillamail.com",
+          "guerrillamail.net",
+          "guerrillamail.org",
+          "guerrillamail.biz",
+          "guerrillamail.de",
+          "guerrillamail.info",
+          "tempmail.com",
+          "temp-mail.org",
+          "10minutemail.com",
+          "10minutemail.net",
+          "throwam.com",
+          "throwaway.email",
+          "trashmail.com",
+          "trashmail.net",
+          "trashmail.me",
+          "trashmail.io",
+          "trashmail.at",
+          "trashmail.org",
+          "yopmail.com",
+          "yopmail.fr",
+          "spam4.me",
+          "sharklasers.com",
+          "guerrillamailblock.com",
+          "grr.la",
+          "spam.la",
+          "dispostable.com",
+          "spamgourmet.com",
+          "spamgourmet.net",
+          "spamgourmet.org",
+          "maildrop.cc",
+          "mailnull.com",
+          "mailnesia.com",
+          "discard.email",
+          "fakeinbox.com",
+          "tempr.email",
+          "tempinbox.com",
+          "tempinbox.co.uk",
+          "getairmail.com",
+          "filzmail.com",
+          "mt2014.com",
+          "mt2015.com",
+          "emailondeck.com",
+          "emkei.cz",
+          "example.com",
+          "example.net",
+          "example.org",
+          "notreal.com",
+          "noreply.com",
+          "nowhere.com",
+          "nothing.com",
+        ];
+        if (disposable.indexOf(domain) !== -1)
+          return {
+            ok: false,
+            reason:
+              "Disposable email addresses are not accepted. Please use your real email.",
+          };
+        var typoDomains = [
+          "gmial.com",
+          "gmaill.com",
+          "gmai.com",
+          "gmali.com",
+          "gnail.com",
+          "gamil.com",
+          "gmail.con",
+          "gmail.cmo",
+          "gmail.cm",
+          "gmail.co",
+          "gmail.comm",
+          "yahooo.com",
+          "yaho.com",
+          "yaoo.com",
+          "yahoo.con",
+          "yahoo.cmo",
+          "yahho.com",
+          "hotmial.com",
+          "hotmail.con",
+          "hotmail.cmo",
+          "hotmali.com",
+          "outlok.com",
+          "outook.com",
+          "outloook.com",
+          "outlook.con",
+          "icloud.con",
+          "iclould.com",
+          "protonmial.com",
+          "protonmal.com",
+        ];
+        if (typoDomains.indexOf(domain) !== -1)
+          return {
+            ok: false,
+            reason:
+              "That looks like a typo in your email  -  please double-check it.",
+          };
+        return { ok: true };
+      }
+
+      function submitRwrScore() {
+        var name = document.getElementById("save-name").value.trim();
+        var email = document.getElementById("save-email").value.trim();
+        var errEl = document.getElementById("rwr-save-error");
+        errEl.style.display = "none";
+
+        if (!name) {
+          errEl.textContent = "Please enter your first name.";
+          errEl.style.display = "block";
+          document.getElementById("save-name").focus();
+          return;
+        }
+        var validity = validateEmail(email);
+        if (!validity.ok) {
+          errEl.textContent = validity.reason;
+          errEl.style.display = "block";
+          document.getElementById("save-email").focus();
+          return;
+        }
+
+        var total = rwrScores.reduce(function (a, b) {
+          return a + b;
+        }, 0);
+        var maxScore = rwrTotal * 4;
+        var tier = rwrTiers[0];
+        for (var i = 0; i < rwrTiers.length; i++) {
+          if (total >= rwrTiers[i].min && total <= rwrTiers[i].max) {
+            tier = rwrTiers[i];
+            break;
+          }
+        }
+
+        var body = new URLSearchParams({
+          "form-name": "rwr-quiz-results",
+          name: name,
+          email: email,
+          score: total + "/" + maxScore,
+          tier: tier.name
+            .replace(/&#8482;/g, "\u2122")
+            .replace(/Remote Work Ready&#8482;/g, "Remote Work Ready\u2122"),
+          properties: "Score:" + total + "/" + maxScore,
+        }).toString();
+
+        // Unlock results immediately  -  submit to backend in background
+        document.getElementById("rwr-save-overlay").style.display = "none";
+        var r = document.getElementById("rwr-result");
+        r.style.filter = "none";
+        r.style.pointerEvents = "auto";
+        r.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Background POST to Netlify
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body,
+        }).catch(function () {});
+      }
+    </script>
+
+    <script>
+      (function () {
+        var stats = document.querySelectorAll(".ds-sec .ds-stat");
+        if (!stats.length) return;
+        var animate = function (el) {
+          var target = +el.dataset.target;
+          var prefix = el.dataset.prefix || "";
+          var suffix = el.dataset.suffix || "";
+          var numEl = el.querySelector(".ds-num");
+          if (!numEl) return;
+          var start = 0;
+          var duration = 1800;
+          var step = function (ts) {
+            if (!start) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            var ease = 1 - Math.pow(1 - progress, 3);
+            numEl.textContent =
+              prefix + Math.floor(ease * target).toLocaleString() + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        };
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                animate(e.target);
+                obs.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+        stats.forEach(function (s) {
+          obs.observe(s);
+        });
+      })();
+    </script>
+  </body>
+</html>

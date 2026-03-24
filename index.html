@@ -1,0 +1,5147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afro Adventurer&#8482; &#8212; Education for Global Citizens</title>
+    <meta
+      property="og:title"
+      content="Afro Adventurer&#8482; &#8212; The Operating System for Diaspora Professionals"
+    />
+    <meta
+      property="og:description"
+      content="Join 1,300+ Black and brown professionals building remote careers and global lifestyles. Remote Work Ready&#8482; community, coaching, and curated opportunities."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://afroadventurer.com/" />
+    <meta
+      name="description"
+      content="Join 1,300+ Black and brown professionals building remote careers and global lifestyles. Remote Work Ready&#8482; community, coaching, and curated opportunities."
+    />
+    <link rel="canonical" href="https://afroadventurer.com/" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --black: #0a0a0a;
+        --gold: #c9a84c;
+        --gl: #e4c47a;
+        --gd: #8b6e2e;
+        --white: #faf8f2;
+        --gray: #bbbbbb;
+        --card: #141210;
+        --dark: #111009;
+        --border: rgba(201, 168, 76, 0.18);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        overflow-x: hidden;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        gap: 10px;
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nl {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        min-width: 0;
+      }
+      .nl img {
+        height: 30px;
+        width: auto;
+        flex-shrink: 0;
+      }
+      .nw {
+        font-family: "Playfair Display", serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .nw em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .nr {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .nb {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 8px 14px;
+        text-decoration: none;
+        transition: all 0.2s;
+        white-space: nowrap;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .nb-g {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .nb-g:hover {
+        background: var(--gl);
+      }
+      .nb-o {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.4);
+      }
+      .nb-o:hover {
+        background: rgba(201, 168, 76, 0.1);
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 24px 100px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 80% 60% at 50% 40%,
+          rgba(201, 168, 76, 0.08) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hl {
+        width: 90px;
+        height: auto;
+        margin-bottom: 22px;
+        opacity: 0;
+        animation: up 0.8s 0.1s forwards;
+        position: relative;
+      }
+      .ht {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 18px;
+        opacity: 0;
+        animation: up 0.8s 0.2s forwards;
+        position: relative;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(42px, 10vw, 106px);
+        font-weight: 900;
+        line-height: 0.93;
+        letter-spacing: -0.02em;
+        color: var(--white);
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: up 0.9s 0.35s forwards;
+        position: relative;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .hero h1 a {
+        color: var(--white);
+        text-decoration: none;
+      }
+      .hsub {
+        font-size: 17px;
+        font-weight: 300;
+        color: rgba(250, 248, 242, 0.7);
+        max-width: 500px;
+        line-height: 1.75;
+        margin-bottom: 44px;
+        opacity: 0;
+        animation: up 0.9s 0.5s forwards;
+        position: relative;
+      }
+      .hstats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        opacity: 0;
+        animation: up 0.9s 0.65s forwards;
+        position: relative;
+      }
+      .st {
+        text-align: center;
+        padding: 0 18px;
+      }
+      .sn {
+        font-family: "Playfair Display", serif;
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .sl {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #cccccc;
+      }
+      .sd {
+        width: 1px;
+        background: rgba(201, 168, 76, 0.25);
+        align-self: stretch;
+        margin: 4px 0;
+      }
+      .scue {
+        position: absolute;
+        bottom: 24px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+        animation: up 1s 1.2s forwards;
+        pointer-events: none;
+        margin: 0 auto;
+      }
+      .scue span {
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+      .scue div {
+        width: 1px;
+        height: 36px;
+        background: linear-gradient(to bottom, var(--gold), transparent);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .vid-sec {
+        background: #050503;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 64px 24px;
+      }
+      .vid-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .vid-hd {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+      .vid-wrap {
+        position: relative;
+        border: 1px solid rgba(201, 168, 76, 0.28);
+        overflow: hidden;
+        box-shadow: 0 0 60px rgba(201, 168, 76, 0.07);
+      }
+      .vid-wrap video {
+        width: 100%;
+        display: block;
+        background: #000;
+        max-height: 560px;
+        object-fit: contain;
+      }
+      .vid-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #6b5520, #c9a84c, #6b5520);
+      }
+
+      .ew {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .ew::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 36px;
+        background: var(--gd);
+      }
+      h2.t {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(28px, 5vw, 56px);
+        font-weight: 700;
+        line-height: 1.05;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      h2.t em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .bt {
+        font-size: 18px;
+        line-height: 1.8;
+        color: rgba(250, 248, 242, 0.88);
+        max-width: 560px;
+      }
+
+      .prob-sec {
+        padding: 80px 24px;
+        border-top: 1px solid var(--border);
+        background: var(--dark);
+      }
+      .prob-in {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: center;
+      }
+      .dgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .dc {
+        background: var(--card);
+        border: 1px solid rgba(201, 168, 76, 0.18);
+        padding: 24px 20px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .dc:hover {
+        border-color: rgba(201, 168, 76, 0.45);
+        transform: translateY(-2px);
+      }
+      .dc::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--gold);
+      }
+      .dn {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .dt {
+        font-size: 14px;
+        line-height: 1.65;
+        color: rgba(250, 248, 242, 0.88);
+      }
+
+      .curr-sec {
+        padding: 80px 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .ctabs {
+        display: flex;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        margin-bottom: 24px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        padding-bottom: 4px;
+      }
+      .ctab {
+        padding: 8px 16px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: rgba(250, 248, 242, 0.3);
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.25s;
+        white-space: nowrap;
+        margin-bottom: -1px;
+        flex-shrink: 0;
+      }
+      .ctab:hover {
+        color: rgba(250, 248, 242, 0.6);
+      }
+      .ctab.on {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+        font-weight: 700;
+      }
+      .cpanel {
+        display: none;
+      }
+      .cpanel.on {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 44px;
+        align-items: start;
+        animation: fade-up 0.35s ease;
+      }
+      .mlist {
+        list-style: none;
+      }
+      .mi {
+        display: flex;
+        gap: 14px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .mi:hover .mi:hover .mtitle {
+        color: var(--white);
+      }
+      .mn {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--gd);
+        padding-top: 3px;
+        min-width: 22px;
+        flex-shrink: 0;
+      }
+      .mtitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--gold);
+        margin-bottom: 4px;
+        line-height: 1.4;
+        transition: color 0.2s;
+      }
+      .curr-pillar-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;
+        color: var(--white);
+        padding: 24px 0 12px;
+        border-bottom: 2px solid var(--gold);
+        margin-bottom: 8px;
+        transition: opacity 0.25s;
+      }
+      .cpanel-heading {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 700;
+        color: var(--white);
+        padding: 20px 0 16px;
+        border-bottom: 2px solid var(--gold);
+        margin-bottom: 4px;
+        letter-spacing: -0.01em;
+        grid-column: 1/-1;
+      }
+      .mdesc {
+        font-size: 12px;
+        color: rgba(250, 248, 242, 0.58);
+        line-height: 1.55;
+      }
+      .mdur {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        color: #aaaaaa;
+        margin-left: auto;
+        padding-top: 3px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .pcard {
+        background: var(--card);
+        border: 1px solid rgba(201, 168, 76, 0.22);
+        padding: 26px;
+        position: sticky;
+        top: 88px;
+      }
+      .pic {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .pttl {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .pdesc {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.7);
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+      .outs {
+        list-style: none;
+      }
+      .outs li {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.8);
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .outs li::before {
+        content: "\2192";
+        color: var(--gold);
+        font-size: 11px;
+      }
+
+      .ev-sec {
+        padding: 80px 24px;
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+      }
+      .ev-in {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .evgrid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-top: 36px;
+      }
+      .evc {
+        background: var(--card);
+        border: 1px solid rgba(201, 168, 76, 0.14);
+        padding: 18px 12px;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .evc::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+      }
+      .evc:hover {
+        border-color: rgba(201, 168, 76, 0.4);
+        transform: translateY(-4px);
+      }
+      .evc:hover::after {
+        transform: scaleX(1);
+      }
+      .eflag {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .ecity {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 4px;
+      }
+      .edet {
+        font-size: 10px;
+        color: var(--gray);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .etag {
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 3px 7px;
+      }
+      .gal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 36px;
+      }
+      .gi {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        aspect-ratio: 4/3;
+      }
+      .gi img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .gi:hover img {
+        transform: scale(1.04);
+      }
+      .gl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 10, 10, 0.88),
+          transparent
+        );
+        padding: 18px 14px 12px;
+      }
+      .gl span {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      .found-sec {
+        padding: 80px 24px;
+        border-top: 1px solid var(--border);
+      }
+      .found-in {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 52px;
+        align-items: start;
+      }
+      .found-img {
+        order: 2;
+      }
+      .found-txt {
+        order: 1;
+      }
+      .port {
+        width: 100%;
+        aspect-ratio: 3/4;
+        border: 1px solid rgba(201, 168, 76, 0.28);
+        position: relative;
+        overflow: hidden;
+        background: #0a0a0a;
+      }
+      .port img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+      .plbl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--gold);
+        padding: 11px 16px;
+        text-align: center;
+      }
+      .plbl a {
+        text-decoration: none;
+        display: block;
+      }
+      .pname {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--black);
+      }
+      .lhint {
+        display: block;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--black);
+        opacity: 0;
+        transition: opacity 0.25s;
+        margin-top: 2px;
+      }
+      .port:hover .lhint {
+        opacity: 1;
+      }
+      .creds {
+        list-style: none;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .creds li {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.65);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .creds li::before {
+        content: "\25C6";
+        color: var(--gold);
+        font-size: 7px;
+        flex-shrink: 0;
+      }
+      blockquote {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(15px, 1.8vw, 19px);
+        font-weight: 400;
+        font-style: italic;
+        color: rgba(250, 248, 242, 0.85);
+        line-height: 1.65;
+        margin-bottom: 20px;
+        border-left: 3px solid var(--gold);
+        padding-left: 18px;
+      }
+      .bio {
+        font-size: 17px;
+        line-height: 1.82;
+        color: rgba(250, 248, 242, 0.85);
+        margin-bottom: 24px;
+      }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .badge {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        padding: 5px 10px;
+      }
+
+      .vis-sec {
+        padding: 80px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .vis-sec::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 70% at 50% 50%,
+          rgba(201, 168, 76, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .vis-in {
+        max-width: 860px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .vq {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(22px, 4vw, 46px);
+        font-weight: 700;
+        line-height: 1.15;
+        color: var(--white);
+        margin-bottom: 18px;
+      }
+      .vq em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .vsub {
+        font-size: 18px;
+        color: rgba(250, 248, 242, 0.85);
+        margin-bottom: 40px;
+        line-height: 1.78;
+      }
+      .cwrap {
+        position: relative;
+        border: 1px solid rgba(201, 168, 76, 0.28);
+        overflow: hidden;
+        margin-bottom: 44px;
+      }
+      .cwrap img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        max-height: 460px;
+        object-position: center 30%;
+      }
+      .ccap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 10, 10, 0.92),
+          transparent
+        );
+        padding: 28px 24px 20px;
+        text-align: left;
+      }
+      .ccap .ce {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+      .ccap .ct {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: var(--white);
+        line-height: 1.3;
+      }
+      .ccap .ct em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .ctas {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cta {
+        display: inline-block;
+        padding: 14px 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s;
+      }
+      .cta-g {
+        background: var(--gold);
+        color: var(--black);
+        border: none;
+      }
+      .cta-g:hover {
+        background: var(--gl);
+        transform: translateY(-2px);
+      }
+      .cta-o {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.42);
+      }
+      .cta-o:hover {
+        border-color: var(--gold);
+        background: rgba(201, 168, 76, 0.07);
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 28px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .flogo {
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+      .flogo em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .fnote {
+        font-size: 12px;
+        color: #cccccc;
+      }
+      .fnote a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+      .legal {
+        background: #050503;
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+        padding: 20px 24px;
+        text-align: center;
+      }
+      .legal p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.85;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      @keyframes up {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .rev {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s,
+          transform 0.7s;
+      }
+      .rev.on {
+        opacity: 1;
+        transform: none;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 10px 14px;
+        }
+        .nb {
+          font-size: 9px;
+          padding: 6px 9px;
+        }
+        .hero {
+          padding: 96px 18px 90px;
+        }
+        .hl {
+          width: 72px;
+        }
+        .hero h1 {
+          font-size: clamp(36px, 11vw, 64px);
+        }
+        .hsub {
+          font-size: 15px;
+        }
+        .st {
+          padding: 0 10px;
+        }
+        .sn {
+          font-size: 26px;
+        }
+        .sl {
+          font-size: 9px;
+        }
+        .vid-sec {
+          padding: 48px 16px;
+        }
+        .prob-sec {
+          padding: 60px 18px;
+        }
+        .prob-in {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .curr-sec {
+          padding: 60px 18px;
+        }
+        .cpanel.on {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .pcard {
+          position: static;
+        }
+        .ev-sec {
+          padding: 60px 18px;
+        }
+        .evgrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gal {
+          grid-template-columns: 1fr;
+        }
+        .found-sec {
+          padding: 60px 18px;
+        }
+        .found-in {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .vis-sec {
+          padding: 60px 18px;
+        }
+        .ccap .ct {
+          font-size: 16px;
+        }
+        footer {
+          padding: 20px 18px;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+      @media (max-width: 420px) {
+        .nw {
+          display: none;
+        }
+        .sd {
+          display: none;
+        }
+        .st {
+          padding: 0 8px;
+        }
+        .sn {
+          font-size: 22px;
+        }
+        .dgrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .ticker-wrap {
+        background: var(--gold);
+        padding: 13px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        border-top: 1px solid #a07830;
+        border-bottom: 1px solid #a07830;
+      }
+      .ticker-track {
+        display: inline-block;
+        animation: ticker 55s linear infinite;
+      }
+      .ticker-track:hover {
+        animation-play-state: paused;
+      }
+      .ticker-item {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--black);
+        padding: 0 32px;
+      }
+      .ticker-item::after {
+        content: "\25C6";
+        margin-left: 32px;
+        font-size: 8px;
+      }
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .wl-sec {
+        padding: 80px 24px;
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+      }
+      .wl-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .wl-form {
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 44px;
+        position: relative;
+        overflow: hidden;
+      }
+      .wl-form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          var(--gd),
+          var(--gold),
+          var(--gd)
+        );
+      }
+      .wl-row {
+        margin-bottom: 24px;
+      }
+      .wl-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 10px;
+      }
+      .wl-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        padding: 12px 16px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .wl-input:focus {
+        border-color: var(--gold);
+      }
+      .wl-input::placeholder {
+        color: rgba(250, 248, 242, 0.3);
+      }
+      select.wl-input option {
+        background: #1a1710;
+        color: var(--white);
+      }
+      .wl-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .wl-pill-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .wl-pill {
+        padding: 8px 14px;
+        border: 1px solid rgba(201, 168, 76, 0.28);
+        background: transparent;
+        color: rgba(250, 248, 242, 0.7);
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+        letter-spacing: 0.06em;
+      }
+      .wl-pill:hover,
+      .wl-pill.sel {
+        border-color: var(--gold);
+        background: rgba(201, 168, 76, 0.12);
+        color: var(--white);
+      }
+      .wl-stars {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+      .wl-star-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+      .wl-star-label {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.75);
+        min-width: 200px;
+      }
+      .star-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        color: rgba(201, 168, 76, 0.3);
+        transition: color 0.15s;
+        padding: 2px;
+      }
+      .star-btn.lit,
+      .star-btn:hover {
+        color: var(--gold);
+      }
+      .wl-submit {
+        width: 100%;
+        padding: 16px;
+        background: var(--gold);
+        color: var(--black);
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s;
+        margin-top: 8px;
+      }
+      .wl-submit:hover {
+        background: var(--gl);
+        transform: translateY(-1px);
+      }
+      .wl-success {
+        display: none;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .wl-success .big {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .wl-success .sub {
+        font-size: 16px;
+        color: rgba(250, 248, 242, 0.75);
+        margin-bottom: 28px;
+        line-height: 1.7;
+      }
+      .wl-success .gamma-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s;
+      }
+      .wl-success .gamma-btn:hover {
+        background: var(--gl);
+      }
+      @media (max-width: 768px) {
+        .wl-form {
+          padding: 28px 18px;
+        }
+        .wl-grid {
+          grid-template-columns: 1fr;
+        }
+        .wl-star-label {
+          min-width: 140px;
+          font-size: 12px;
+        }
+      }
+
+      .coach-sec {
+        padding: 80px 24px;
+        background: var(--black);
+        border-top: 1px solid var(--border);
+      }
+      .coach-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .coach-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 40px;
+      }
+      .coach-card {
+        background: var(--card);
+        border: 1px solid rgba(201, 168, 76, 0.18);
+        padding: 28px 22px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .coach-card:hover {
+        border-color: rgba(201, 168, 76, 0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
+      }
+      .coach-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, var(--gd), var(--gold));
+        transform: scaleX(0);
+        transition: transform 0.3s;
+      }
+      .coach-card:hover::before {
+        transform: scaleX(1);
+      }
+      .coach-icon {
+        font-size: 28px;
+        margin-bottom: 14px;
+      }
+      .coach-title {
+        font-family: "Playfair Display", serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+      .coach-desc {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.7);
+        line-height: 1.65;
+        margin-bottom: 18px;
+        flex: 1;
+      }
+      .coach-price {
+        font-family: "DM Mono", monospace;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--gold);
+        margin-bottom: 16px;
+      }
+      .coach-price span {
+        font-size: 11px;
+        color: var(--gray);
+        display: block;
+        margin-top: 2px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .coach-btn {
+        display: block;
+        text-align: center;
+        padding: 11px 16px;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+      .coach-btn:hover {
+        background: var(--gl);
+      }
+      @media (max-width: 768px) {
+        .coach-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .coach-grid ~ div > [style*="grid-template-columns:repeat(3"] {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .coach-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .donate-sec {
+        padding: 64px 24px;
+        background: linear-gradient(
+          135deg,
+          #0d0b07 0%,
+          #1a1408 50%,
+          #0d0b07 100%
+        );
+        border-top: 1px solid rgba(201, 168, 76, 0.25);
+        border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+        text-align: center;
+      }
+      .donate-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .donate-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 16px;
+      }
+      .donate-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(24px, 4vw, 42px);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 16px;
+      }
+      .donate-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .donate-body {
+        font-size: 16px;
+        color: rgba(250, 248, 242, 0.78);
+        line-height: 1.78;
+        margin-bottom: 32px;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .donate-amounts {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+      .donate-amt {
+        padding: 10px 20px;
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        background: transparent;
+        color: var(--gold);
+        font-family: "DM Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .donate-amt:hover,
+      .donate-amt.sel {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .donate-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s;
+        border: none;
+        cursor: pointer;
+      }
+      .donate-btn:hover {
+        background: var(--gl);
+        transform: translateY(-2px);
+      }
+      .donate-note {
+        font-size: 12px;
+        color: rgba(250, 248, 242, 0.4);
+        margin-top: 16px;
+      }
+
+      .gal-carousel {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        margin-top: 36px;
+      }
+      .cs-track {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .cs-slide {
+        min-width: 100%;
+        flex-shrink: 0;
+      }
+      .cs-slide .gi {
+        aspect-ratio: 4/3;
+        border: none;
+      }
+      .cs-slide .gi img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .cs-prev,
+      .cs-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(10, 10, 10, 0.7);
+        border: 1px solid rgba(201, 168, 76, 0.4);
+        color: var(--gold);
+        font-size: 20px;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+      }
+      .cs-prev {
+        left: 12px;
+      }
+      .cs-next {
+        right: 12px;
+      }
+      .cs-prev:hover,
+      .cs-next:hover {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .cs-dots {
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        z-index: 10;
+      }
+      .cs-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.35);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 0;
+      }
+      .cs-dot.on {
+        background: var(--gold);
+        transform: scale(1.3);
+      }
+      @media (max-width: 768px) {
+        .cs-prev,
+        .cs-next {
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+        }
+      }
+
+      .wmap-wrap {
+        position: relative;
+        max-width: 1000px;
+        margin: 52px auto 0;
+        min-height: 380px;
+      }
+      .wmap-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 0.85;
+      }
+      .wmap-stats {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .wstat-card {
+        position: absolute;
+        pointer-events: all;
+        background: rgba(13, 11, 8, 0.88);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        padding: 16px 18px;
+        min-width: 140px;
+        max-width: 180px;
+        transition: all 0.3s;
+        cursor: default;
+      }
+      .wstat-card:hover {
+        background: rgba(20, 16, 8, 0.97);
+        border-color: var(--gold);
+        transform: translateY(-4px) scale(1.04);
+        z-index: 10;
+        box-shadow: 0 8px 32px rgba(201, 168, 76, 0.18);
+      }
+      .wstat-num {
+        font-family: "DM Mono", monospace;
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .wstat-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(250, 248, 242, 0.7);
+        margin: 6px 0 0;
+      }
+      .wstat-detail {
+        font-size: 11px;
+        color: rgba(250, 248, 242, 0.55);
+        line-height: 1.5;
+        margin-top: 6px;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.3s,
+          opacity 0.3s;
+        opacity: 0;
+      }
+      .wstat-card:hover .wstat-detail {
+        max-height: 60px;
+        opacity: 1;
+        color: rgba(250, 248, 242, 0.55);
+      }
+      .wstat-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+      }
+      .wstat-center:hover {
+        transform: translate(-50%, -50%) scale(1.06) !important;
+      }
+      @media (max-width: 768px) {
+        .wmap-wrap {
+          min-height: auto;
+        }
+        .wmap-stats {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          margin-top: 20px;
+        }
+        .wstat-card {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          max-width: 100%;
+        }
+        .wstat-center {
+          transform: none !important;
+        }
+        .wstat-center:hover {
+          transform: translateY(-4px) scale(1.04) !important;
+        }
+        .wstat-detail {
+          max-height: 60px !important;
+          opacity: 1 !important;
+        }
+        .wmap-svg {
+          display: block;
+          opacity: 0.65;
+        }
+      }
+
+      .found-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 14px 16px;
+        background: rgba(201, 168, 76, 0.1);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-top: 3px solid var(--gold);
+      }
+      .found-name-strip {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.04em;
+        margin-bottom: 2px;
+      }
+      .found-title-strip {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .found-li-btn {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-decoration: none;
+        padding: 5px 12px;
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .found-li-btn:hover {
+        background: rgba(201, 168, 76, 0.1);
+        border-color: var(--gold);
+      }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .badges .badge {
+        margin: 0;
+      }
+      .flink {
+        color: rgba(250, 248, 242, 0.55);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .flink:hover {
+        color: var(--gold);
+      }
+      .flinks {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+
+      /* &#9472;&#9472; MOBILE TOUCH & GLOBAL &#9472;&#9472; */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      button {
+        touch-action: manipulation;
+      }
+      a {
+        touch-action: manipulation;
+      }
+      .cta,
+      .nb,
+      .coach-btn,
+      .donate-btn,
+      .eco-card-btn,
+      .found-li-btn,
+      .nav-cta {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 10px 14px;
+          gap: 8px;
+        }
+        .nav-logo {
+          font-size: 11px;
+        }
+        .nb {
+          font-size: 9px;
+          padding: 7px 10px;
+        }
+        .hero {
+          padding: 90px 16px 56px;
+          min-height: auto;
+        }
+        .hero h1 {
+          font-size: clamp(34px, 10vw, 52px);
+          line-height: 1;
+        }
+        .hero-sub {
+          font-size: 15px;
+          margin: 14px auto 28px;
+        }
+        .ctas {
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+        }
+        .cta {
+          width: 100%;
+          text-align: center;
+          padding: 14px 20px;
+          font-size: 10px;
+        }
+        .tick-inner {
+          font-size: 11px;
+          gap: 28px;
+        }
+        .prob-grid {
+          grid-template-columns: 1fr;
+        }
+        .curr-tabs {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .ctab {
+          font-size: 10px;
+          padding: 8px 14px;
+        }
+        .ev-in {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .ew {
+          font-size: 9px;
+        }
+        .evgrid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .evc {
+          padding: 16px;
+        }
+        .gal-carousel {
+          margin-top: 20px;
+        }
+        .cs-slide .gi {
+          aspect-ratio: 4/3;
+        }
+        .cs-prev {
+          left: 6px;
+          width: 32px;
+          height: 32px;
+          font-size: 13px;
+          padding: 0;
+        }
+        .cs-next {
+          right: 6px;
+          width: 32px;
+          height: 32px;
+          font-size: 13px;
+          padding: 0;
+        }
+        .cs-dots {
+          bottom: 10px;
+        }
+        .cs-dot {
+          width: 6px;
+          height: 6px;
+        }
+        .gal-lbl span {
+          font-size: 10px;
+        }
+        .found-sec {
+          padding: 48px 16px;
+        }
+        .found-in {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .found-img {
+          order: 2 !important;
+        }
+        .found-txt {
+          order: 1 !important;
+        }
+        .fphoto {
+          max-height: 380px;
+          object-fit: cover;
+          object-position: top;
+        }
+        .found-banner {
+          padding: 10px 12px;
+        }
+        .found-name-strip {
+          font-size: 14px;
+        }
+        .found-title-strip {
+          font-size: 9px;
+        }
+        .found-li-btn {
+          font-size: 10px;
+          padding: 5px 10px;
+        }
+        .creds li {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+        .badges {
+          gap: 6px;
+        }
+        .badge {
+          font-size: 9px;
+          padding: 3px 7px;
+        }
+        .bio {
+          font-size: 15px;
+        }
+        .coach-sec {
+          padding: 48px 16px;
+        }
+        .coach-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .coach-card {
+          padding: 24px 20px;
+        }
+        .coach-title {
+          font-size: 16px;
+        }
+        .coach-price {
+          font-size: 22px;
+        }
+        .coach-btn {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+        .vis-sec {
+          padding: 48px 16px;
+        }
+        .cwrap {
+          margin-bottom: 0;
+        }
+        .cwrap img {
+          height: 280px !important;
+        }
+        .wmap-wrap {
+          min-height: auto;
+          margin-top: 32px;
+        }
+        .wmap-svg {
+          display: block;
+          opacity: 0.65;
+        }
+        .wmap-stats {
+          position: relative !important;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+          margin-top: 0;
+        }
+        .wstat-card {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          min-width: 0;
+          max-width: 100%;
+          padding: 14px 12px;
+        }
+        .wstat-center {
+          transform: none !important;
+          grid-column: 1/-1;
+        }
+        .wstat-num {
+          font-size: 26px;
+        }
+        .wstat-label {
+          font-size: 10px;
+        }
+        .wstat-detail {
+          max-height: none !important;
+          opacity: 1 !important;
+          font-size: 11px;
+        }
+        .donate-sec {
+          padding: 48px 16px;
+        }
+        .donate-amounts {
+          flex-direction: column;
+          gap: 8px;
+        }
+        .donate-amt {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+          font-size: 12px;
+        }
+        .donate-btn {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+          padding: 20px 16px;
+        }
+        .flinks {
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+        .legal {
+          padding: 16px;
+        }
+        .legal p {
+          font-size: 11px;
+        }
+        .t {
+          font-size: clamp(24px, 7vw, 36px);
+        }
+        .bt {
+          font-size: 15px;
+        }
+        section {
+          padding: 52px 16px;
+        }
+      }
+      @media (max-width: 480px) {
+        .evgrid {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: clamp(30px, 11vw, 44px);
+        }
+        .wmap-stats {
+          grid-template-columns: 1fr;
+        }
+        .wstat-center {
+          grid-column: 1;
+        }
+        .curr-tabs {
+          flex-direction: column;
+        }
+        .ctab {
+          width: 100%;
+        }
+      }
+      input,
+      select,
+      textarea {
+        font-size: 16px !important;
+      }
+      .eco-sec {
+        padding: 80px 24px;
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .eco-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .eco-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-top: 0;
+        text-align: left;
+      }
+      .eco-card {
+        background: var(--card);
+        padding: 32px 28px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+        border-bottom: 2px solid transparent;
+      }
+      .eco-card--active {
+        border-bottom-color: var(--gold);
+        background: rgba(201, 168, 76, 0.04);
+      }
+      .eco-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
+      }
+      .eco-card-step {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        color: var(--gd);
+        letter-spacing: 0.2em;
+        margin-bottom: 14px;
+      }
+      .eco-card-icon {
+        font-size: 30px;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .eco-card-status {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 10px;
+      }
+      .eco-card-status--soon {
+        color: rgba(250, 248, 242, 0.35);
+      }
+      .eco-card-name {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .eco-card-desc {
+        font-size: 13px;
+        color: rgba(250, 248, 242, 0.62);
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .eco-card-btn {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-decoration: none;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+        transition: all 0.2s;
+      }
+      .eco-card-btn:hover {
+        border-bottom-color: var(--gold);
+        padding-left: 4px;
+      }
+      @media (max-width: 768px) {
+        .eco-cards {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+        .eco-card {
+          padding: 24px 20px;
+        }
+        .eco-sec {
+          padding: 52px 16px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          padding: 8px 12px;
+          gap: 6px;
+          flex-wrap: nowrap;
+        }
+        .nl {
+          flex: 0 0 auto;
+          min-width: 0;
+          gap: 6px;
+        }
+        .nl img {
+          height: 24px;
+          flex-shrink: 0;
+        }
+        .nw {
+          font-size: 10px;
+          white-space: nowrap;
+        }
+        .nr {
+          flex: 1;
+          justify-content: flex-end;
+          gap: 5px;
+          min-width: 0;
+        }
+        .nb {
+          font-size: 8px;
+          padding: 5px 7px;
+          letter-spacing: 0.05em;
+          white-space: nowrap;
+        }
+      }
+      @media (max-width: 400px) {
+        .nw {
+          display: none;
+        }
+        .nb {
+          font-size: 8px;
+          padding: 5px 6px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          padding-bottom: 100px;
+        }
+        .hstats {
+          gap: 0;
+          margin-bottom: 20px;
+        }
+        .st .sn {
+          font-size: 20px;
+        }
+        .st .sl {
+          font-size: 9px;
+        }
+        .scue {
+          bottom: 20px;
+        }
+      }
+
+      .hero-network-bar {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 7px 18px;
+        margin-bottom: 18px;
+        background: rgba(201, 168, 76, 0.05);
+      }
+      .hnb-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      @media (max-width: 600px) {
+        .wmap-wrap {
+          min-height: 0;
+          margin-top: 24px;
+        }
+        .wmap-svg {
+          opacity: 1;
+          display: none;
+        }
+        .wmap-stats {
+          display: none;
+        }
+        .wmap-mobile-static {
+          display: block;
+        }
+      }
+      .wmap-mobile-static {
+        display: none;
+        width: 100%;
+        margin-top: 24px;
+      }
+
+      /* Solo female traveler pull quote */
+      .solo-quote {
+        display: flex;
+        gap: 0;
+        margin: 24px 0;
+        align-items: stretch;
+      }
+      .sq-bar {
+        width: 3px;
+        background: var(--gold);
+        flex-shrink: 0;
+        margin-right: 18px;
+      }
+      .sq-text {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(15px, 1.8vw, 18px);
+        font-weight: 500;
+        color: var(--white);
+        line-height: 1.65;
+        font-style: normal;
+      }
+
+      /* Corporate teaser mobile */
+      @media (max-width: 768px) {
+        [style*="grid-template-columns:1fr 1fr;gap:64px"] {
+          grid-template-columns: 1fr !important;
+          gap: 36px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        [style*="grid-template-columns:1fr 1fr;gap:10px"] {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        [style*="grid-template-columns:1fr 1fr;gap:64px"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+
+      /* Solo female traveler pull quote */
+      .solo-quote {
+        display: flex;
+        gap: 0;
+        margin: 24px 0;
+        align-items: stretch;
+      }
+      .sq-bar {
+        width: 3px;
+        background: var(--gold);
+        flex-shrink: 0;
+        margin-right: 18px;
+      }
+      .sq-text {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(15px, 1.8vw, 18px);
+        font-weight: 500;
+        color: var(--white);
+        line-height: 1.65;
+        font-style: normal;
+      }
+
+      /* Corporate teaser mobile */
+      @media (max-width: 768px) {
+        .rev[style*="grid-template-columns:1fr 1fr;gap:64px"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        [style*="grid-template-columns:1fr 1fr;gap:8px"] {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nl">
+        <img
+        src="./images/logo_main.png"  
+        alt="Logo"
+        />
+        <div class="nw">Afro <em>Adventurer</em>&#8482;</div>
+      </div>
+      <div class="nr">
+        <a
+          href="https://afro-adventurer-pro-3uwcezy.gamma.site/"
+          class="nb nb-o"
+          >Remote Work Ready&#8482;</a
+        >
+        <a
+          href="aa_explorer.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nb nb-o"
+          >&#127760; Explore</a
+        >
+        <a href="corporate.html" class="nb nb-g">For Organizations</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <img
+      src="./images/logo_main.png"  
+      alt="Afro Adventurer"
+        class="hl"
+      />
+      <div class="ht">The Operating System for Diaspora Professionals</div>
+      <h1>
+        <a
+          href="https://www.linkedin.com/company/afroadventurer"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Education<br />for <em>Global<br />Citizens.</em></a
+        >
+      </h1>
+      <p class="hsub">
+        The first platform preparing BIPOC professionals to build resilient
+        global careers, diversify income, and reconnect with their roots &#8212;
+        economically, not just culturally.
+      </p>
+      <div class="hstats">
+        <div class="st">
+          <div class="sn" id="cnt-network">$0</div>
+          <div class="sl">
+            Opportunities Shared<span
+              style="
+                display: block;
+                font-size: 9px;
+                opacity: 0.5;
+                letter-spacing: 0.06em;
+                margin-top: 2px;
+              "
+              >in community</span
+            >
+          </div>
+        </div>
+        <div class="sd"></div>
+        <div class="st">
+          <div class="sn" id="cnt-members">0</div>
+          <div class="sl">Network of BIPOC Trailblazers</div>
+        </div>
+        <div class="sd"></div>
+        <div class="st">
+          <div class="sn" id="cnt-retention">0</div>
+          <div class="sl">
+            Retention Rate<span
+              style="
+                display: block;
+                font-size: 9px;
+                opacity: 0.5;
+                letter-spacing: 0.06em;
+                margin-top: 2px;
+              "
+              >Since 2023</span
+            >
+          </div>
+        </div>
+        <div class="sd"></div>
+        <div class="st">
+          <div class="sn" id="cnt-followers">0</div>
+          <div class="sl">Followers</div>
+        </div>
+      </div>
+      <div class="scue">
+        <span>Scroll</span>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item"
+          >$89B in diaspora remittances sent to Africa annually</span
+        ><span class="ticker-item"
+          >Africa holds 30% of the world's mineral reserves</span
+        ><span class="ticker-item"
+          >60% of the world's uncultivated arable land is in Africa</span
+        ><span class="ticker-item"
+          >Africa's median age: 19 years &#8212; youngest population on
+          Earth</span
+        ><span class="ticker-item"
+          >African diaspora collective net worth estimated at $14 Trillion</span
+        ><span class="ticker-item"
+          >54 countries &#183; 1.4 Billion people &#183; $3.4T GDP and
+          rising</span
+        ><span class="ticker-item"
+          >700K+ Black Americans living abroad &#8212; and growing every
+          year</span
+        ><span class="ticker-item"
+          >Nigeria alone receives $20B+ in annual remittances</span
+        ><span class="ticker-item"
+          >Africa will be home to 26% of the world's workforce by 2050</span
+        ><span class="ticker-item"
+          >$1.5 Trillion tech opportunity across the African continent</span
+        ><span class="ticker-item"
+          >Ghana Right of Abode &#183; Rwanda 10-Year Visa &#183; Portugal D8
+          Nomad Visa</span
+        ><span class="ticker-item"
+          >Black American households lose $10K+ annually to the racial wealth
+          gap</span
+        ><span class="ticker-item"
+          >Remote work unlocks the ability to earn in dollars and live on naira,
+          cedis, or kwanzas</span
+        ><span class="ticker-item"
+          >$89B in diaspora remittances sent to Africa annually</span
+        ><span class="ticker-item"
+          >Africa holds 30% of the world's mineral reserves</span
+        ><span class="ticker-item"
+          >60% of the world's uncultivated arable land is in Africa</span
+        ><span class="ticker-item"
+          >Africa's median age: 19 years &#8212; youngest population on
+          Earth</span
+        ><span class="ticker-item"
+          >African diaspora collective net worth estimated at $14 Trillion</span
+        ><span class="ticker-item"
+          >54 countries &#183; 1.4 Billion people &#183; $3.4T GDP and
+          rising</span
+        ><span class="ticker-item"
+          >700K+ Black Americans living abroad &#8212; and growing every
+          year</span
+        ><span class="ticker-item"
+          >Nigeria alone receives $20B+ in annual remittances</span
+        ><span class="ticker-item"
+          >Africa will be home to 26% of the world's workforce by 2050</span
+        ><span class="ticker-item"
+          >$1.5 Trillion tech opportunity across the African continent</span
+        ><span class="ticker-item"
+          >Ghana Right of Abode &#183; Rwanda 10-Year Visa &#183; Portugal D8
+          Nomad Visa</span
+        ><span class="ticker-item"
+          >Black American households lose $10K+ annually to the racial wealth
+          gap</span
+        ><span class="ticker-item"
+          >Remote work unlocks the ability to earn in dollars and live on naira,
+          cedis, or kwanzas</span
+        >
+      </div>
+    </div>
+
+    <div class="vid-sec">
+      <div class="vid-inner">
+        <div class="vid-hd">
+          <div class="ew" style="justify-content: center">Our Story</div>
+          <h2 class="t">The Movement <em>in Motion.</em></h2>
+          <p
+            style="
+              font-size: 15px;
+              color: rgba(250, 248, 242, 0.5);
+              margin-top: 6px;
+            "
+          >
+            Watch the vision &#8212; then join it.
+          </p>
+        </div>
+        <div class="vid-wrap">
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            style="
+              width: 100%;
+              display: block;
+              background: #000;
+              max-height: 560px;
+              object-fit: contain;
+            "
+          >
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+          <div class="vid-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prob-sec">
+      <div class="prob-in">
+        <div class="rev">
+          <div class="ew">The Gap We&#8217;re Closing</div>
+          <h2 class="t">
+            No one built<br />this school.<br /><em>So we are.</em>
+          </h2>
+          <p class="bt">
+            BIPOC professionals want to work remotely, invest abroad, navigate
+            dual citizenship, and build wealth across borders &#8212; but no
+            institution teaches this holistically. Afro Adventurer is that
+            institution.
+          </p>
+        </div>
+        <div class="dgrid rev">
+          <div class="dc">
+            <div class="dn">81%</div>
+            <div class="dt">
+              of Black professionals prefer remote or hybrid work &#8212; higher
+              than any other demographic
+            </div>
+          </div>
+          <div class="dc">
+            <div class="dn">32.6M</div>
+            <div class="dt">
+              Americans now work remotely &#8212; triple the pre-pandemic rate
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: var(--gray);
+                line-height: 1.5;
+                margin-top: 6px;
+                letter-spacing: 0.01em;
+              "
+            >
+              Over <strong style="color: var(--gl)">50% of workers</strong> say
+              they would quit rather than return to the office full-time
+            </div>
+          </div>
+          <div class="dc">
+            <div class="dn">700K+</div>
+            <div class="dt">
+              Black Americans living abroad in 2025, driven by political
+              instability and the search for quality of life
+            </div>
+          </div>
+          <div class="dc">
+            <div class="dn">$1.5T</div>
+            <div class="dt">
+              Africa&#8217;s technology opportunity to leapfrog legacy systems
+              and lead global value chains
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eco-sec">
+      <div class="eco-inner rev">
+        <div class="ew">The Afro Adventurer&#8482; Ecosystem</div>
+        <h2 class="t">One Ecosystem.<br /><em>Three Ways In.</em></h2>
+        <p class="bt" style="max-width: 660px; margin: 0 auto 48px">
+          We are not a one-size-fits-all platform. Whether you are just getting
+          started, ready to go deep, or want hands-on support &#8212; there is a
+          place for you in the ecosystem.
+        </p>
+
+        <div class="eco-cards">
+          <div class="eco-card eco-card--active">
+            <div class="eco-card-step">01</div>
+            <div class="eco-card-icon">&#128241;</div>
+            <div class="eco-card-status">&#9679; Active Now</div>
+            <div class="eco-card-name">Remote Work Ready&#8482;</div>
+            <div class="eco-card-desc">
+              Your entry point. Human-vetted remote job alerts, travel deal
+              drops, live coworking, and a vetted professional network &#8212;
+              all delivered via WhatsApp. No spam. No fluff.
+            </div>
+            <a href="remote-work-ready.html" class="eco-card-btn"
+              >Learn More &#8594;</a
+            >
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-card-step">02</div>
+            <div class="eco-card-icon">&#127979;</div>
+            <div class="eco-card-status eco-card-status--soon">
+              &#9679; Coming Soon
+            </div>
+            <div class="eco-card-name">Afro Adventurer Academy&#8482;</div>
+            <div class="eco-card-desc">
+              A structured cohort program built around 6 pillars: Financial
+              Health, Global Careers, Mobility &amp; Citizenship, Diaspora
+              Wealth, Language, and Wellness. The full curriculum below.
+            </div>
+            <a href="waitlist.html" class="eco-card-btn"
+              >Join the Waitlist &#8594;</a
+            >
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-card-step">03</div>
+            <div class="eco-card-icon">&#127759;</div>
+            <div class="eco-card-status eco-card-status--active">
+              &#9679; Active Now
+            </div>
+            <div class="eco-card-name">Passport to Profit&#8482;</div>
+            <div class="eco-card-desc">
+              1-on-1 private coaching with Quiana. LinkedIn audits, remote
+              career strategy, relocation roadmaps, and full Plan B planning.
+              For professionals ready to move fast.
+            </div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="eco-card-btn"
+              >Book a Session &#8594;</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            href="remote-work-ready.html"
+            class="cta cta-g"
+            style="margin-right: 12px"
+            >Explore Our Ecosystem &#8594;</a
+          >
+          <a href="waitlist.html" class="cta cta-o"
+            >Join the Academy Waitlist</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="curr-sec">
+      <div class="rev">
+        <div class="ew">Afro Adventurer Academy</div>
+        <h2 class="t">The <em>Six-Pillar</em> Curriculum</h2>
+        <p class="bt" style="margin-bottom: 36px">
+          A proprietary co-created learning OS built alongside our community.
+          <em style="color: var(--gold)"
+            >Afro Adventurer AI-powered global advisor &#8212; coming soon.</em
+          ><br /><br />
+          <span
+            style="
+              font-size: 11px;
+              color: rgba(255, 255, 255, 0.35);
+              font-family: &quot;DM Mono&quot;, monospace;
+              border: 1px solid rgba(201, 168, 76, 0.18);
+              padding: 4px 10px;
+              letter-spacing: 0.1em;
+            "
+            >&#169; Afro Adventurer&#8482; &#8212; All curriculum &amp; IP
+            proprietary</span
+          >
+        </p>
+      </div>
+      <div class="ctabs rev">
+        <button class="ctab on" onclick="swTab(0)">
+          &#129354; Financial Health
+        </button>
+        <button class="ctab" onclick="swTab(1)">&#127760; Global Career</button>
+        <button class="ctab" onclick="swTab(2)">&#128706; Mobility</button>
+        <button class="ctab" onclick="swTab(3)">&#128176; Wealth</button>
+        <button class="ctab" onclick="swTab(4)">
+          &#128483; Language &amp; Culture
+        </button>
+        <button class="ctab" onclick="swTab(5)">&#127973; Wellness</button>
+      </div>
+      <div class="cpanel on" id="cp0">
+        <div class="cpanel-heading">&#129354; Financial Health</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">
+                Financial Fitness Assessment &amp; Money Mindset Reset
+              </div>
+              <div class="mdesc">
+                Audit your financial health and build a personalized money
+                action plan
+              </div>
+            </div>
+            <span class="mdur">Wk 1</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">
+                Credit Mastery &amp; Debt Elimination Strategy
+              </div>
+              <div class="mdesc">
+                Repair, build, and leverage credit for global mobility
+              </div>
+            </div>
+            <span class="mdur">Wk 2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                Budgeting for Life on Multiple Currencies
+              </div>
+              <div class="mdesc">
+                Build a budget that works whether you&#8217;re in NYC, Accra, or
+                Lisbon
+              </div>
+            </div>
+            <span class="mdur">Wk 3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">
+                Emergency Fund, Insurance &amp; Global Safety Nets
+              </div>
+              <div class="mdesc">
+                Healthcare abroad, international insurance, and a 6-month safety
+                net
+              </div>
+            </div>
+            <span class="mdur">Wk 4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Retirement &amp; Long-Term Wealth Building Across Borders
+              </div>
+              <div class="mdesc">
+                401k strategy, expat retirement accounts, and building a
+                pension-free future
+              </div>
+            </div>
+            <span class="mdur">Wk 5&#8211;6</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#129354;</div>
+          <div class="pttl">Financial Health &amp; Fitness</div>
+          <div class="pdesc">
+            Financial wellness is the foundation of global freedom. This pillar
+            equips members to get their financial house in order so money is
+            never the reason they can&#8217;t go.
+          </div>
+          <ul class="outs">
+            <li>Personal financial health score</li>
+            <li>Debt elimination roadmap</li>
+            <li>Global budget template</li>
+            <li>International insurance guide</li>
+            <li>Cross-border retirement strategy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpanel" id="cp1">
+        <div class="cpanel-heading">&#127760; Global Career</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">
+                Remote Work Positioning &amp; Personal Brand
+              </div>
+              <div class="mdesc">
+                Craft a global-facing professional identity that opens doors
+                across time zones
+              </div>
+            </div>
+            <span class="mdur">Wk 1&#8211;2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">
+                International Job Search &amp; Contract Negotiation
+              </div>
+              <div class="mdesc">
+                Navigate global job boards and negotiate foreign contracts
+              </div>
+            </div>
+            <span class="mdur">Wk 2&#8211;3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                AI &amp; Tech Literacy for Career Leverage
+              </div>
+              <div class="mdesc">
+                Use AI tools to 10x productivity and position as a future-proof
+                hire
+              </div>
+            </div>
+            <span class="mdur">Wk 3&#8211;4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">
+                Sales, Communication &amp; Global Client Management
+              </div>
+              <div class="mdesc">
+                Master cross-cultural client relationships and freelance sales
+                pipelines
+              </div>
+            </div>
+            <span class="mdur">Wk 4&#8211;5</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Building Multi-Income Streams from Anywhere
+              </div>
+              <div class="mdesc">
+                Layer consulting, digital products, and passive income as a
+                location-independent professional
+              </div>
+            </div>
+            <span class="mdur">Wk 5&#8211;6</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#127760;</div>
+          <div class="pttl">Global Career Readiness</div>
+          <div class="pdesc">
+            Leave with a global-facing resume, negotiated offer framework, and
+            roadmap for your first remote or international role.
+          </div>
+          <ul class="outs">
+            <li>Remote role within 90 days</li>
+            <li>AI-ready professional toolkit</li>
+            <li>International contract template</li>
+            <li>Multi-income action plan</li>
+            <li>Peer accountability partner</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpanel" id="cp2">
+        <div class="cpanel-heading">&#128706; Mobility</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">Second Passport Pathways 101</div>
+              <div class="mdesc">
+                Ancestry, investment, and naturalization routes for BIPOC
+                professionals &#8212; demystified
+              </div>
+            </div>
+            <span class="mdur">Wk 1</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">Dual Residency &amp; Visa Strategy</div>
+              <div class="mdesc">
+                Digital nomad visas, long-stay options, and maintaining U.S.
+                ties legally
+              </div>
+            </div>
+            <span class="mdur">Wk 2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                International Tax Basics for Remote Workers
+              </div>
+              <div class="mdesc">
+                FEIE, FBAR, and smart tax strategies for earning while living
+                abroad
+              </div>
+            </div>
+            <span class="mdur">Wk 3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">
+                Legal Mobility Planning &#8212; Fireside with Immigration
+                Attorney
+              </div>
+              <div class="mdesc">
+                Live Q&amp;A with a licensed expert on your specific country and
+                situation
+              </div>
+            </div>
+            <span class="mdur">Wk 4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Risk Preparation &amp; Emergency Readiness Abroad
+              </div>
+              <div class="mdesc">
+                Banking, healthcare, safety planning, and repatriation protocols
+              </div>
+            </div>
+            <span class="mdur">Wk 5</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#128706;</div>
+          <div class="pttl">Global Mobility &amp; Citizenship</div>
+          <div class="pdesc">
+            Leave with a personalized mobility roadmap knowing your visa
+            options, tax obligations, and legal steps to live globally with
+            confidence.
+          </div>
+          <ul class="outs">
+            <li>Custom passport/residency roadmap</li>
+            <li>International banking guide</li>
+            <li>Tax filing checklist for expats</li>
+            <li>Emergency protocol plan</li>
+            <li>Attorney consultation access</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpanel" id="cp3">
+        <div class="cpanel-heading">&#128176; Wealth</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">
+                Diaspora Real Estate: Investing Back Home
+              </div>
+              <div class="mdesc">
+                Buying property in Ghana, Nigeria, Jamaica, Brazil &#8212; what
+                to know and how to start
+              </div>
+            </div>
+            <span class="mdur">Wk 1&#8211;2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">
+                Multi-Currency Banking &amp; Wealth Diversification
+              </div>
+              <div class="mdesc">
+                Open foreign accounts, manage FX risk, and protect wealth across
+                jurisdictions
+              </div>
+            </div>
+            <span class="mdur">Wk 2&#8211;3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                Investing in Emerging Markets &amp; African Tech
+              </div>
+              <div class="mdesc">
+                ETFs, startup ecosystems, and direct investment opportunities
+              </div>
+            </div>
+            <span class="mdur">Wk 3&#8211;4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">Building a Freelance Business Abroad</div>
+              <div class="mdesc">
+                Entity formation, invoicing U.S. clients from abroad, scaling a
+                global services business
+              </div>
+            </div>
+            <span class="mdur">Wk 4&#8211;5</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Generational Wealth Planning Across Borders
+              </div>
+              <div class="mdesc">
+                Wills, trusts, and estate planning for families with assets in
+                multiple countries
+              </div>
+            </div>
+            <span class="mdur">Wk 5&#8211;6</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#128176;</div>
+          <div class="pttl">Multi-Income Wealth Systems</div>
+          <div class="pdesc">
+            Move from one income stream to three. From renting to investing.
+            From local to a global portfolio.
+          </div>
+          <ul class="outs">
+            <li>Investment roadmap by region</li>
+            <li>Multi-currency banking setup</li>
+            <li>Diaspora real estate shortlist</li>
+            <li>Freelance entity checklist</li>
+            <li>Estate planning starter guide</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpanel" id="cp4">
+        <div class="cpanel-heading">&#128483; Language &amp; Culture</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">
+                Language Strategy: Choosing Your Second Language for Career ROI
+              </div>
+              <div class="mdesc">
+                Portuguese, French, Spanish, Swahili &#8212; which unlocks the
+                most opportunity for you
+              </div>
+            </div>
+            <span class="mdur">Wk 1</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">
+                African Diaspora History &amp; Economic Roots
+              </div>
+              <div class="mdesc">
+                Understanding the diaspora as global economic architecture
+              </div>
+            </div>
+            <span class="mdur">Wk 2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                Global Business Etiquette &amp; Cross-Cultural Intelligence
+              </div>
+              <div class="mdesc">
+                Navigate business norms across West Africa, the Caribbean, Latin
+                America, and Europe
+              </div>
+            </div>
+            <span class="mdur">Wk 3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">
+                Safe &amp; Culturally Intelligent Travel for Black Women
+              </div>
+              <div class="mdesc">
+                Where to go, what to know, and how to show up with confidence
+                and safety anywhere
+              </div>
+            </div>
+            <span class="mdur">Wk 4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Building Your Diaspora Network: Community as Infrastructure
+              </div>
+              <div class="mdesc">
+                Activate your global network and build lasting cross-border
+                relationships
+              </div>
+            </div>
+            <span class="mdur">Wk 5</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#128483;</div>
+          <div class="pttl">Language &amp; Cultural Fluency</div>
+          <div class="pdesc">
+            Cultural intelligence is a career asset. Leave more confident in new
+            countries and more connected to your roots.
+          </div>
+          <ul class="outs">
+            <li>Personal language learning roadmap</li>
+            <li>Diaspora history resource library</li>
+            <li>Country etiquette guides</li>
+            <li>Safe travel resource database</li>
+            <li>Global community network access</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpanel" id="cp5">
+        <div class="cpanel-heading">&#127973; Wellness</div>
+        <ul class="mlist">
+          <li class="mi">
+            <span class="mn">01</span>
+            <div>
+              <div class="mtitle">
+                Medical Tourism 101: Quality Care at a Fraction of the Cost
+              </div>
+              <div class="mdesc">
+                Top destinations for dental, surgical, cosmetic, and wellness
+                care
+              </div>
+            </div>
+            <span class="mdur">Wk 1</span>
+          </li>
+          <li class="mi">
+            <span class="mn">02</span>
+            <div>
+              <div class="mtitle">International Health Insurance Deep Dive</div>
+              <div class="mdesc">
+                Expat health plans, travel insurance, and how to avoid being
+                uninsured abroad
+              </div>
+            </div>
+            <span class="mdur">Wk 2</span>
+          </li>
+          <li class="mi">
+            <span class="mn">03</span>
+            <div>
+              <div class="mtitle">
+                Travel Fitness &amp; Maintaining Wellness on the Move
+              </div>
+              <div class="mdesc">
+                Staying physically and mentally healthy while living nomadically
+              </div>
+            </div>
+            <span class="mdur">Wk 3</span>
+          </li>
+          <li class="mi">
+            <span class="mn">04</span>
+            <div>
+              <div class="mtitle">
+                Managing Health Scares &amp; Medical Emergencies Abroad
+              </div>
+              <div class="mdesc">
+                Finding hospitals, navigating language barriers, emergency
+                evacuation protocols
+              </div>
+            </div>
+            <span class="mdur">Wk 4</span>
+          </li>
+          <li class="mi">
+            <span class="mn">05</span>
+            <div>
+              <div class="mtitle">
+                Mental Health Abroad: Isolation, Identity &amp; Healing
+              </div>
+              <div class="mdesc">
+                Managing diaspora identity, loneliness, culture shock, and
+                finding affirming support globally
+              </div>
+            </div>
+            <span class="mdur">Wk 5</span>
+          </li>
+        </ul>
+        <div class="pcard">
+          <div class="pic">&#127973;</div>
+          <div class="pttl">Medical Tourism &amp; Global Wellness</div>
+          <div class="pdesc">
+            Your health doesn&#8217;t pause when you travel. Access quality care
+            and handle emergencies confidently anywhere in the world.
+          </div>
+          <ul class="outs">
+            <li>Medical tourism destination guide</li>
+            <li>International insurance comparison</li>
+            <li>Nomadic wellness routine toolkit</li>
+            <li>Emergency medical protocol abroad</li>
+            <li>Global mental health resource list</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev-sec">
+      <div class="ev-in">
+        <div class="rev">
+          <div class="ew">Community in Action</div>
+          <h2 class="t">We Don&#8217;t Just<br />Teach. <em>We Gather.</em></h2>
+          <p class="bt">
+            Sold-out events across 4+ continents. Members don&#8217;t attend
+            once &#8212; they come back, bring friends, and stay for years.
+          </p>
+        </div>
+        <div class="evgrid rev">
+          <div class="evc">
+            <div class="eflag">&#127482;&#127480;</div>
+            <div class="ecity">New York City</div>
+            <div class="edet">Launch &amp; Community</div>
+            <div class="etag">Sold Out</div>
+          </div>
+          <div class="evc">
+            <div class="eflag">&#127482;&#127480;</div>
+            <div class="ecity">Miami</div>
+            <div class="edet">Diaspora Connect</div>
+            <div class="etag">Sold Out</div>
+          </div>
+          <div class="evc">
+            <div class="eflag">&#127482;&#127480;</div>
+            <div class="ecity">Austin</div>
+            <div class="edet">Tech &amp; Remote Work</div>
+            <div class="etag">Sold Out</div>
+          </div>
+          <div class="evc">
+            <div class="eflag">&#127482;&#127480;</div>
+            <div class="ecity">Las Vegas</div>
+            <div class="edet">Wealth &amp; Mobility</div>
+            <div class="etag">Sold Out</div>
+          </div>
+          <div class="evc">
+            <div class="eflag">&#127468;&#127469;</div>
+            <div class="ecity">Accra, Ghana</div>
+            <div class="edet">Diaspora Homecoming</div>
+            <div class="etag">Sold Out</div>
+          </div>
+        </div>
+        <div class="gal-carousel rev">
+          <div class="cs-track">
+            <div class="cs-slide active">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_1.jpeg"  
+                alt="Las Vegas &#8212; Community Dinner"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>Las Vegas &#8212; Community Dinner</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_2.jpeg"    
+                alt="AfroTech &#8212; Member Meetup"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>AfroTech &#8212; Member Meetup</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_3.jpeg"    
+                alt="New York City &#8212; Community Night"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>New York City &#8212; Community Night</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_4.jpeg"    
+                alt="Hudson Valley &#8212; Adventure Hike"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>Hudson Valley &#8212; Adventure Hike</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_5.jpeg"    
+                alt="Dallas &#8212; Diaspora Dinner Toast"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>Dallas &#8212; Diaspora Dinner Toast</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_6.jpeg"    
+                alt="Accra &#8212; Poolside by the Ocean"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>Accra &#8212; Poolside by the Ocean</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_7.jpeg"   
+                alt="Lagos &#8212; Beach Club Gathering"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>Lagos &#8212; Beach Club Gathering</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_8.jpeg"    
+                alt="NSBE x BIT &#8212; Tech Panel"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>NSBE x BIT &#8212; Tech Panel</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-slide">
+              <div class="gi">
+                <img
+                src="./images/index_cr1_9.jpeg"    
+                alt="New York &#8212; Beach Day"
+                  loading="lazy"
+                />
+                <div class="gal-lbl">
+                  <span>New York &#8212; Beach Day</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="cs-prev" onclick="csMove(-1)" aria-label="Previous">
+            &#8592;
+          </button>
+          <button class="cs-next" onclick="csMove(1)" aria-label="Next">
+            &#8594;
+          </button>
+          <div class="cs-dots">
+            <button class="cs-dot on" onclick="csGo(0)"></button
+            ><button class="cs-dot" onclick="csGo(1)"></button
+            ><button class="cs-dot" onclick="csGo(2)"></button
+            ><button class="cs-dot" onclick="csGo(3)"></button
+            ><button class="cs-dot" onclick="csGo(4)"></button
+            ><button class="cs-dot" onclick="csGo(5)"></button
+            ><button class="cs-dot" onclick="csGo(6)"></button
+            ><button class="cs-dot" onclick="csGo(7)"></button
+            ><button class="cs-dot" onclick="csGo(8)"></button>
+          </div>
+        </div>
+        <div class="ctas rev">
+          <a
+            href="waitlist.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta cta-g"
+            >Join the Waitlist</a
+          >
+          <a
+            href="https://luma.com/afroadventurer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta cta-o"
+            >Our Events</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="found-sec">
+      <div class="found-in">
+        <!-- LEFT: photo + identity block -->
+        <div class="found-img rev">
+          <img
+          src="./images/meet_founder.jpeg"  
+          alt="Quiana Berry"
+            class="fphoto"
+            style="width: 100%; height: auto; object-fit: cover; display: block"
+          />
+          <!-- Gold banner under photo -->
+          <div class="found-banner">
+            <div>
+              <div class="found-name-strip">Quiana Berry</div>
+              <div class="found-title-strip">
+                Founder &amp; CEO, Afro Adventurer&#8482;
+              </div>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/quianaberry"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="found-li-btn"
+              >&#128279; LinkedIn</a
+            >
+          </div>
+          <!-- Creds under banner -->
+          <ul class="creds" style="margin-top: 20px">
+            <li>
+              Remote Product Leader &#8212; Red Hat &amp; IBM &bull; 2x
+              Trailblazer Nominee
+            </li>
+            <li>
+              Speaker: PyTorch &bull; GitHub Universe &bull; Linux Foundation
+              Ethical AI &bull; Agile Testing Days Germany
+            </li>
+            <li>
+              <a
+                href="http://blog.sheswanderful.com/quiana-berry-bessie-award-finalist-inclusion-award/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--gold); text-decoration: none"
+                >&#127942; Bessie Award Finalist</a
+              >
+              &#8212; Top Travel Community for Inclusion &bull; Afro
+              Adventurer&#8482;
+            </li>
+            <li>&#9729; AWS Builders Grant Recipient</li>
+            <li>
+              &#127881; Funded $8,000 in free conference tickets to open doors
+              for our community
+            </li>
+            <li>
+              Solo traveler 10+ years across 40+ countries &bull; lived abroad,
+              learned Spanish
+            </li>
+            <li>Undergraduate research: Princeton &amp; NOAA</li>
+          </ul>
+          <div class="badges" style="margin-top: 14px">
+            <span class="badge">Afro-Latina Founder</span
+            ><span class="badge">Cultural Anthropologist</span
+            ><span class="badge">Travel Accident Survivor</span
+            ><span class="badge">&#9729; AWS Builders Grant</span
+            ><span class="badge">&#127942; Bessie Award Finalist</span
+            ><span class="badge">Latina in Tech of the Year</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: bio only -->
+        <div class="found-txt rev">
+          <div class="ew">Meet the Founder</div>
+          <h2 class="t">Built From<br /><em>Experience.</em></h2>
+          <blockquote>
+            My father didn&#8217;t even own a passport. I became the first in my
+            family to cross an international border &#8212; not for migration,
+            like my Peruvian grandparents did, but by choice. And since my first
+            trip, I never stopped trying to open up borders for my community.
+          </blockquote>
+          <p class="bio">
+            I&#8217;m an Afro-Latina who chose not to chase the American dream
+            &#8212; I built a global one. I&#8217;m a pre-med student turned
+            cultural anthropology grad, turned tech Product Leader &#8212; twice
+            nominated for the Trailblazer Award (the top honor at Red Hat/IBM)
+            and recognized as Latina in Tech of the Year. A global speaker at
+            top tech venues across the world: USA, Canada, Spain, China,
+            Germany, and more.<br /><br />I hold a Cultural Anthropology degree
+            with undergraduate research at Princeton and NOAA. A solo traveler
+            for 10+ years across 40+ countries, living in 10+ of them across the
+            years, picking up new cultures and languages in the process. I bring
+            a rare combination of academic rigor, tech credibility, and lived
+            global experience to everything I build.
+          </p>
+          <div class="solo-quote rev">
+            <div class="sq-bar"></div>
+            <p class="sq-text">
+              As a solo female traveler who has survived the highest highs and
+              the lowest lows, I know that having a community is not a
+              nice-to-have. It is a necessity &#8212; not just to navigate
+              travel, but career, identity, and life abroad too.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COACHING -->
+
+ <!-- LOGO BELT (inside expert section, after award) -->
+          <div
+            class="rev"
+            style="
+              grid-column: 1/-1;
+              margin: 24px -32px 0;
+              background: var(--dark);
+              border-top: 1px solid var(--border);
+              border-bottom: 1px solid var(--border);
+              padding: 28px 0;
+              overflow: hidden;
+            "
+          >
+            <div style="text-align: center; margin-bottom: 16px">
+              <span
+                style="
+                  font-size: 13px;
+                  font-weight: 700;
+                  letter-spacing: 0.4em;
+                  text-transform: uppercase;
+                  color: rgba(201, 168, 76, 0.65);
+                "
+                >Ecosystem &amp; Partners</span
+              >
+            </div>
+            <div
+              style="overflow: hidden; white-space: nowrap; position: relative"
+            >
+              <div
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 36px;
+                  padding: 0 20px;
+                  animation: logobelt 48s linear infinite;
+                  white-space: nowrap;
+                  will-change: transform;
+                "
+                id="logoBelt"
+              >
+                <img
+                  src="./images/Wunderkind_Logo.jpg"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/TKH_Horizontal_Purple_Logo.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/unilever logo.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo1.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo2.png"
+                  alt="IBM"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo3.png"
+                  alt="AWS"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo4.png"
+                  alt="Google"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo5.png"
+                  alt="GitHub"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo6.png"
+                  alt="Linux Foundation"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo7.png"
+                  alt="Render ATL"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo8.png"
+                  alt="AnitaB.org"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo9.png"
+                  alt="PyTorch"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo10.png"
+                  alt="Ally Financial"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo11.png"
+                  alt="Mars Wrigley"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo12.png"
+                  alt="The Knowledge House"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo13.png"
+                  alt="NSBE"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo14.png"
+                  alt="EnergyHub"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo15.png"
+                  alt="Visa"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <!-- duplicate for seamless loop -->
+                <img
+                  src="./images/Wunderkind_Logo.jpg"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/TKH_Horizontal_Purple_Logo.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/unilever logo.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo1.png"
+                  alt="Red Hat"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo2.png"
+                  alt="IBM"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo3.png"
+                  alt="AWS"
+                  style="
+                    height: 44px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo4.png"
+                  alt="Google"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo5.png"
+                  alt="GitHub"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo6.png"
+                  alt="Linux Foundation"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo7.png"
+                  alt="Render ATL"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo8.png"
+                  alt="AnitaB.org"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo9.png"
+                  alt="PyTorch"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo10.png"
+                  alt="Ally Financial"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo11.png"
+                  alt="Mars Wrigley"
+                  style="
+                    height: 40px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.85;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.85'"
+                />
+                <img
+                  src="./images/logo12.png"
+                  alt="The Knowledge House"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo13.png"
+                  alt="NSBE"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo14.png"
+                  alt="EnergyHub"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+                <img
+                  src="./images/logo15.png"
+                  alt="Visa"
+                  style="
+                    height: 36px;
+                    width: auto;
+                    object-fit: contain;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                    flex-shrink: 0;
+                  "
+                  onmouseover="this.style.opacity = '1'"
+                  onmouseout="this.style.opacity = '0.8'"
+                />
+              </div>
+            </div>
+          </div>
+
+    <!-- CORPORATE TEASER -->
+    <div
+      style="
+        padding: 72px 24px;
+        border-top: 1px solid var(--border);
+        background: var(--dark);
+      "
+    >
+      <div style="max-width: 1100px; margin: 0 auto" class="rev">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+          "
+        >
+          <div>
+            <div class="ew">For Organizations</div>
+            <h2 class="t" style="font-size: clamp(26px, 4vw, 44px)">
+              Your Teams Are Global.<br /><em>Is Your Strategy?</em>
+            </h2>
+            <p
+              style="
+                font-size: 16px;
+                line-height: 1.8;
+                color: rgba(250, 248, 242, 0.72);
+                margin-bottom: 28px;
+                max-width: 440px;
+              "
+            >
+              If you are managing distributed teams, navigating Gen Z
+              integration, or losing good people to misalignment, there is a
+              workshop built for exactly that. Practitioner-led.
+              Research-backed. No generic training.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap">
+              <a
+                href="corporate.html"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  padding: 14px 28px;
+                  background: var(--gold);
+                  color: var(--black);
+                  font-size: 10px;
+                  font-weight: 700;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  transition: background 0.22s;
+                  min-height: 46px;
+                "
+                >View Corporate Offerings &#8594;</a
+              >
+              <a
+                href="corporate.html#offerings"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  padding: 14px 22px;
+                  border: 1px solid rgba(201, 168, 76, 0.35);
+                  color: var(--gold);
+                  font-size: 10px;
+                  font-weight: 700;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  transition: all 0.22s;
+                  min-height: 46px;
+                "
+                >See where you are bleeding value</a
+              >
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+            <div
+              style="
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--gold);
+                padding: 22px 18px;
+              "
+            >
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: var(--gold);
+                  line-height: 1;
+                  margin-bottom: 8px;
+                "
+              >
+                $30K+
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  line-height: 1.5;
+                  color: rgba(250, 248, 242, 0.65);
+                "
+              >
+                Average cost to replace a single Gen Z employee
+              </div>
+            </div>
+            <div
+              style="
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--gold);
+                padding: 22px 18px;
+              "
+            >
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: var(--gold);
+                  line-height: 1;
+                  margin-bottom: 8px;
+                "
+              >
+                2.3&#215;
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  line-height: 1.5;
+                  color: rgba(250, 248, 242, 0.65);
+                "
+              >
+                Revenue growth at companies with integrated, inclusive team
+                cultures
+              </div>
+            </div>
+            <div
+              style="
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--gold);
+                padding: 22px 18px;
+              "
+            >
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: var(--gold);
+                  line-height: 1;
+                  margin-bottom: 8px;
+                "
+              >
+                70%
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  line-height: 1.5;
+                  color: rgba(250, 248, 242, 0.65);
+                "
+              >
+                Of team engagement variance explained by the manager alone
+                (Gallup)
+              </div>
+            </div>
+            <div
+              style="
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--gold);
+                padding: 22px 18px;
+              "
+            >
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: var(--gold);
+                  line-height: 1;
+                  margin-bottom: 8px;
+                "
+              >
+                $1T
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  line-height: 1.5;
+                  color: rgba(250, 248, 242, 0.65);
+                "
+              >
+                Lost annually to voluntary turnover. Most of it preventable.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coach-sec">
+      <div class="coach-inner">
+        <div class="rev">
+          <div class="ew">Work Directly With Quiana</div>
+          <h2 class="t">1-on-1 Premium <em>Coaching.</em></h2>
+          <p class="bt" style="margin-bottom: 0">
+            Stop figuring it out alone. Book a focused strategy session and
+            leave with a real plan &#8212; for your career, your move, or your
+            next chapter.
+          </p>
+        </div>
+        <div class="coach-grid rev">
+          <div class="coach-card">
+            <div class="coach-icon">&#128101;</div>
+            <div class="coach-title">LinkedIn &amp; Remote Resume Audit</div>
+            <div class="coach-desc">
+              A complete review and rewrite strategy for your LinkedIn profile
+              and resume &#8212; positioned for remote roles, global companies,
+              and diaspora opportunities.
+            </div>
+            <div class="coach-price">$497<span>One-Time Session</span></div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="coach-btn"
+              >Book Session &#8594;</a
+            >
+          </div>
+          <div class="coach-card">
+            <div class="coach-icon">&#127760;</div>
+            <div class="coach-title">Remote Work Career Strategy</div>
+            <div class="coach-desc">
+              Map your path from where you are to a fully remote income. We
+              cover job search strategy, salary negotiation, and building income
+              streams that travel with you.
+            </div>
+            <div class="coach-price">$697<span>One-Time Session</span></div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="coach-btn"
+              >Book Session &#8594;</a
+            >
+          </div>
+          <div class="coach-card">
+            <div class="coach-icon">&#128506;</div>
+            <div class="coach-title">Itinerary &amp; Relocation Planning</div>
+            <div class="coach-desc">
+              Custom travel or relocation itinerary built around your goals,
+              budget, and lifestyle. Whether it&#8217;s a 3-month stint or a
+              permanent move &#8212; we map it out together.
+            </div>
+            <div class="coach-price">$897<span>One-Time Session</span></div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="coach-btn"
+              >Book Session &#8594;</a
+            >
+          </div>
+          <div
+            class="coach-card"
+            style="
+              border-color: rgba(201, 168, 76, 0.45);
+              background: rgba(201, 168, 76, 0.04);
+            "
+          >
+            <div class="coach-icon">&#9992;&#65039;</div>
+            <div class="coach-title">
+              Plan B &#8212; Full Relocation Strategy
+            </div>
+            <div class="coach-desc">
+              The complete package. Visa options, financial prep, remote income
+              plan, destination selection, and a 90-day action plan. Your entire
+              roadmap to life abroad.
+            </div>
+            <div class="coach-price">$1,497<span>Deep-Dive Session</span></div>
+            <a
+              href="https://calendly.com/berry-quiana/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="coach-btn"
+              style="
+                background: var(--black);
+                color: var(--gold);
+                border: 1px solid var(--gold);
+              "
+              >Book Deep-Dive &#8594;</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vis-sec">
+      <div class="vis-in">
+        <div
+          class="rev"
+          style="text-align: center; max-width: 700px; margin: 0 auto 48px"
+        >
+          <div class="ew">The Vision</div>
+          <h2 class="t">We Are Building an <em>Institution.</em></h2>
+          <p class="vsub">
+            Not a travel group. Not a social club. A full infrastructure for the
+            global Black and brown professional &#8212; from financial freedom
+            and remote careers to citizenship, real estate, and generational
+            wealth abroad.
+          </p>
+        </div>
+        <div
+          class="cwrap rev"
+          style="
+            max-width: 1000px;
+            margin: 0 auto 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+          "
+        >
+          <img
+          src="./images/the_vision.jpeg" 
+          alt="Afro Adventurer Community"
+            style="
+              width: 100%;
+              height: 540px;
+              object-fit: cover;
+              object-position: center 85%;
+              display: block;
+            "
+          />
+        </div>
+        <div
+          class="rev"
+          style="
+            max-width: 1000px;
+            margin: 0 auto 52px;
+            padding: 24px 32px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-top: none;
+          "
+        >
+          <p
+            style="
+              font-family: &quot;Playfair Display&quot;, serif;
+              font-size: clamp(15px, 2.2vw, 20px);
+              font-style: italic;
+              color: var(--white);
+              line-height: 1.5;
+              margin-bottom: 10px;
+            "
+          >
+            &#8220;Our community of 1,300+ members across 4 continents &#8212;
+            professionals, entrepreneurs, and trailblazers passionate about
+            building transcontinental wealth and freedom on their own
+            terms.&#8221;
+          </p>
+          <span
+            style="
+              font-size: 10px;
+              font-weight: 700;
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              color: var(--gold);
+            "
+            >&#9679; Afro Adventurer&#8482; Community</span
+          >
+        </div>
+        <!-- WORLD MAP STATS -->
+        <div class="wmap-wrap rev">
+          <svg
+            class="wmap-svg"
+            viewBox="0 0 1000 500"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <line
+              x1="0"
+              y1="100"
+              x2="1000"
+              y2="100"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="0"
+              y1="200"
+              x2="1000"
+              y2="200"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="0"
+              y1="300"
+              x2="1000"
+              y2="300"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="0"
+              y1="400"
+              x2="1000"
+              y2="400"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="200"
+              y1="0"
+              x2="200"
+              y2="500"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="400"
+              y1="0"
+              x2="400"
+              y2="500"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="600"
+              y1="0"
+              x2="600"
+              y2="500"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="800"
+              y1="0"
+              x2="800"
+              y2="500"
+              stroke="rgba(201,168,76,0.06)"
+              stroke-width="1"
+            />
+            <line
+              x1="0"
+              y1="250"
+              x2="1000"
+              y2="250"
+              stroke="rgba(201,168,76,0.12)"
+              stroke-width="1"
+              stroke-dasharray="4,6"
+            />
+            <path
+              d="M120,80 L180,70 L220,90 L240,140 L220,180 L200,200 L170,210 L150,190 L130,160 L110,130 Z"
+              fill="rgba(201,168,76,0.08)"
+              stroke="rgba(201,168,76,0.2)"
+              stroke-width="1"
+            />
+            <path
+              d="M200,230 L240,220 L260,240 L270,290 L260,340 L240,370 L210,360 L195,320 L190,270 Z"
+              fill="rgba(201,168,76,0.08)"
+              stroke="rgba(201,168,76,0.2)"
+              stroke-width="1"
+            />
+            <path
+              d="M420,60 L480,55 L500,75 L490,110 L460,120 L430,110 L415,90 Z"
+              fill="rgba(201,168,76,0.08)"
+              stroke="rgba(201,168,76,0.2)"
+              stroke-width="1"
+            />
+            <path
+              d="M450,140 L510,130 L540,150 L550,200 L545,270 L530,320 L510,350 L490,340 L470,300 L455,250 L445,190 Z"
+              fill="rgba(201,168,76,0.12)"
+              stroke="rgba(201,168,76,0.3)"
+              stroke-width="1.5"
+            />
+            <path
+              d="M550,60 L700,50 L780,80 L800,130 L760,160 L700,170 L640,150 L580,130 L545,100 Z"
+              fill="rgba(201,168,76,0.08)"
+              stroke="rgba(201,168,76,0.2)"
+              stroke-width="1"
+            />
+            <path
+              d="M760,300 L840,290 L870,320 L860,360 L820,370 L775,350 L755,330 Z"
+              fill="rgba(201,168,76,0.08)"
+              stroke="rgba(201,168,76,0.2)"
+              stroke-width="1"
+            />
+            <circle cx="500" cy="230" r="6" fill="var(--gold)" opacity="0.9" />
+            <circle
+              cx="500"
+              cy="230"
+              r="6"
+              fill="none"
+              stroke="var(--gold)"
+              stroke-width="1.5"
+              opacity="0.6"
+            >
+              <animate
+                attributeName="r"
+                values="6;18"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0.6;0"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="170" cy="160" r="6" fill="var(--gold)" opacity="0.9" />
+            <circle
+              cx="170"
+              cy="160"
+              r="6"
+              fill="none"
+              stroke="var(--gold)"
+              stroke-width="1.5"
+              opacity="0.6"
+            >
+              <animate
+                attributeName="r"
+                values="6;18"
+                dur="2.4s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0.6;0"
+                dur="2.4s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="650" cy="110" r="6" fill="var(--gold)" opacity="0.9" />
+            <circle
+              cx="650"
+              cy="110"
+              r="6"
+              fill="none"
+              stroke="var(--gold)"
+              stroke-width="1.5"
+              opacity="0.6"
+            >
+              <animate
+                attributeName="r"
+                values="6;18"
+                dur="2.8s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0.6;0"
+                dur="2.8s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="220" cy="280" r="6" fill="var(--gold)" opacity="0.9" />
+            <circle
+              cx="220"
+              cy="280"
+              r="6"
+              fill="none"
+              stroke="var(--gold)"
+              stroke-width="1.5"
+              opacity="0.6"
+            >
+              <animate
+                attributeName="r"
+                values="6;18"
+                dur="3.2s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0.6;0"
+                dur="3.2s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <line
+              x1="170"
+              y1="160"
+              x2="500"
+              y2="230"
+              stroke="rgba(201,168,76,0.15)"
+              stroke-width="1"
+              stroke-dasharray="4,4"
+            />
+            <line
+              x1="500"
+              y1="230"
+              x2="650"
+              y2="110"
+              stroke="rgba(201,168,76,0.15)"
+              stroke-width="1"
+              stroke-dasharray="4,4"
+            />
+            <line
+              x1="170"
+              y1="160"
+              x2="220"
+              y2="280"
+              stroke="rgba(201,168,76,0.15)"
+              stroke-width="1"
+              stroke-dasharray="4,4"
+            />
+            <line
+              x1="500"
+              y1="230"
+              x2="220"
+              y2="280"
+              stroke="rgba(201,168,76,0.15)"
+              stroke-width="1"
+              stroke-dasharray="4,4"
+            />
+          </svg>
+          <div class="wmap-stats">
+            <div class="wstat-card" style="top: 12%; left: 4%">
+              <div class="wstat-num">$1M+</div>
+              <div class="wstat-label">In Value Shared</div>
+              <div class="wstat-detail">
+                Founder grants, remote opportunities, travel giveaways &amp;
+                conference access distributed over the years
+              </div>
+            </div>
+            <div class="wstat-card" style="top: 12%; right: 4%">
+              <div class="wstat-num">780+</div>
+              <div class="wstat-label">Active Members</div>
+              <div class="wstat-detail">
+                A growing community of BIPOC professionals building global
+                careers &amp; lives
+              </div>
+            </div>
+            <div class="wstat-card" style="bottom: 8%; left: 4%">
+              <div class="wstat-num">4+</div>
+              <div class="wstat-label">Continents Represented</div>
+              <div class="wstat-detail">
+                Where diaspora frequents most &#8212; and our presence is only
+                growing
+              </div>
+            </div>
+            <div class="wstat-card" style="bottom: 8%; right: 4%">
+              <div class="wstat-num">6</div>
+              <div class="wstat-label">Academy Pillars</div>
+              <div class="wstat-detail">
+                Finance, Career, Mobility, Wealth, Language, Health
+              </div>
+            </div>
+            <div class="wstat-card wstat-center">
+              <div class="wstat-num">$10K+</div>
+              <div class="wstat-label">Conference Tickets Given Away</div>
+              <div class="wstat-detail">
+                $10,000+ in tickets gifted to members in need across top tech
+                &amp; career conferences
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="rev"
+          style="
+            text-align: center;
+            max-width: 680px;
+            margin: 40px auto 0;
+            padding: 0 16px;
+          "
+        >
+          <p
+            class="bt"
+            style="margin-bottom: 28px; color: rgba(250, 248, 242, 0.72)"
+          >
+            This academy vision includes future institutional curriculum
+            partnerships with CUNY and HBCUs, and a diaspora reinvestment
+            network connecting U.S. talent to African markets, tech startups,
+            and international real estate opportunities.
+          </p>
+          <a href="waitlist.html" class="cta cta-g" style="margin-right: 12px"
+            >Join the Waitlist &#8594;</a
+          ><a
+            href="https://gamma.app/docs/Afro-AdventurerInvestor-Deck-nbr57hz4pskmaqa"
+            class="cta cta-o"
+            >See Investor Deck&#8482; &#8594;</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- DONATION -->
+    <div class="donate-sec">
+      <div class="donate-inner rev">
+        <div class="donate-tag">&#9679; Afro Adventurer Foundation &#9679;</div>
+        <h2 class="donate-title">
+          Invest in the Institution.<br /><em>Fund Your Career Insurance.</em>
+        </h2>
+        <p class="donate-body">
+          Afro Adventurer is bootstrapped, community-funded, and built for us by
+          us. Every contribution goes directly toward curriculum development,
+          expert instructors, community events, and platform access for everyone
+          who needs it.
+        </p>
+        <p class="donate-body">
+          We&#8217;ve already won an AWS Builders Grant and distributed over
+          <strong style="color: var(--gold)">$1,000,000 in value</strong>
+          through grants, remote work opportunities, travel giveaways, and
+          conference access. The Foundation targets high-impact grant categories
+          including
+          <strong style="color: var(--gl)">workforce development</strong>,
+          <strong style="color: var(--gl)">AI literacy</strong>,
+          <strong style="color: var(--gl)">global mobility</strong>,
+          <strong style="color: var(--gl)">economic inclusion</strong>, and
+          <strong style="color: var(--gl)"
+            >remote work and cross-cultural team collaboration</strong
+          >
+          &#8212; the same pillars driving demand for our corporate offering and
+          defining the future of work for diaspora professionals.
+        </p>
+        <p class="donate-body">
+          We are building the
+          <strong style="color: var(--gold)">Diaspora Fund</strong>, investing
+          in diaspora-led ventures and serving as the bridge between
+          Africa&#8217;s resources and the next generation of Afro global
+          citizens, founders, and investors.
+        </p>
+        <p class="donate-body">
+          <span style="color: var(--gold); font-weight: 600; font-size: 17px"
+            >We are living proof that this community is an asset needed now more
+            than ever</span
+          ><span style="color: var(--white); font-size: 17px">
+            &#8212; and it <strong>changes lives</strong> when we have
+            <strong>access to education</strong> like this.</span
+          >
+        </p>
+        <blockquote style="margin-top: 32px; margin-bottom: 40px">
+          The diaspora already holds trillions in global spending power. The
+          question is not whether the movement will happen. The question is who
+          will build the infrastructure to support it.
+        </blockquote>
+        <div class="donate-amounts">
+          <a
+            href="https://ko-fi.com/quianab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-amt sel"
+            onclick="selAmt(this)"
+            >$75 &#8212; Plant a Seed</a
+          >
+          <a
+            href="https://ko-fi.com/quianab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-amt"
+            onclick="selAmt(this)"
+            >$250 &#8212; Back the Movement</a
+          >
+          <a
+            href="https://ko-fi.com/quianab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-amt"
+            onclick="selAmt(this)"
+            >$500 &#8212; Fund Module R&amp;D</a
+          >
+          <a
+            href="https://ko-fi.com/quianab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-amt"
+            onclick="selAmt(this)"
+            >$800 &#8212; Sponsor a Student</a
+          >
+          <a
+            href="https://ko-fi.com/quianab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-amt"
+            onclick="selAmt(this)"
+            >$1,000+ &#8212; Institutional Partner</a
+          >
+        </div>
+        <a
+          href="https://ko-fi.com/quianab"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="donate-btn"
+          >Support Afro Adventurer on Ko-fi &#8594;</a
+        >
+        <div class="donate-note">
+          Secure donations via Ko-fi &middot; No account required &middot; All
+          contributions help build the academy
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="flogo">Afro <em>Adventurer</em>&#8482;</div>
+      <div class="flinks">
+        <a href="remote-work-ready.html" class="flink">Our Offerings</a>
+        <a
+          href="aa_explorer.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flink"
+          >Explore</a
+        >
+        <a href="waitlist.html" class="flink">Waitlist</a>
+        <a href="corporate.html" class="flink">For Organizations</a>
+      </div>
+      <div class="fnote">
+        &#169; 2026 Afro Adventurer&#8482;. All rights reserved.
+      </div>
+    </footer>
+    <div style="display:flex;justify-content: center;">
+      <a
+            href="https://gamma.app/docs/Afro-AdventurerInvestor-Deck-nbr57hz4pskmaqa"
+            class="cta cta-o"
+            style="padding: 5px 15px;"
+            >See Investor Deck&#8482; &#8594;</a
+          >
+    </div>
+    <div class="legal">
+      <p>
+        &#169; 2026 Afro Adventurer&#8482;. All rights reserved. Afro
+        Adventurer&#8482;, Afro Adventurer Academy&#8482;, Remote Work
+        Ready&#8482;, and Passport to Profit&#8482; are trademark-pending names
+        and proprietary intellectual property of Afro Adventurer LLC.
+        Unauthorized reproduction, copying, or use of any content, curriculum,
+        frameworks, or community materials from this platform &#8212; in whole
+        or in part &#8212; is strictly prohibited and will be pursued to the
+        fullest extent of applicable trademark, copyright, and intellectual
+        property law.<br /><br />This platform provides education, community,
+        and curated resources. All outcomes depend entirely on individual
+        effort, consistency, and personal decision-making. Afro Adventurer LLC
+        makes no guarantees of income, employment, visa approval, or relocation
+        success. By engaging with any Afro Adventurer product or community, you
+        agree that you are solely responsible for your own decisions, actions,
+        and results. Afro Adventurer LLC is not liable for any financial loss,
+        missed opportunity, or adverse outcome arising from decisions made based
+        on content accessed through this platform.<br /><br />Afro Adventurer
+        works with vetted expert partners in immigration, finance, real estate,
+        and legal fields. Nothing on this platform substitutes for a direct
+        contractual relationship with those licensed professionals.
+      </p>
+    </div>
+
+    <script>
+      var pillarNames = [
+        "&#129354; Financial Health",
+        "&#127760; Global Career",
+        "&#128706; Mobility",
+        "&#128176; Wealth",
+        "&#128483; Language & Culture",
+        "&#127973; Wellness",
+      ];
+      function swTab(i) {
+        document.querySelectorAll(".ctab").forEach(function (b, j) {
+          b.classList.toggle("on", i === j);
+        });
+        document.querySelectorAll(".cpanel").forEach(function (p, j) {
+          p.classList.toggle("on", i === j);
+        });
+      }
+
+      // Auto-swipe curriculum tabs every 3 seconds
+      (function () {
+        var tabCount = 6;
+        var current = 0;
+        var timer = setInterval(function () {
+          current = (current + 1) % tabCount;
+          swTab(current);
+        }, 3000);
+        document.querySelectorAll(".ctab").forEach(function (btn, i) {
+          btn.addEventListener("click", function () {
+            clearInterval(timer);
+            current = i;
+            timer = setInterval(function () {
+              current = (current + 1) % tabCount;
+              swTab(current);
+            }, 3000);
+          });
+        });
+      })();
+      var obs = new IntersectionObserver(
+        function (es) {
+          es.forEach(function (e, i) {
+            if (e.isIntersecting) {
+              setTimeout(function () {
+                e.target.classList.add("on");
+              }, i * 80);
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".rev").forEach(function (el) {
+        obs.observe(el);
+      });
+      (function () {
+        for (var i = 0; i < 6; i++) {
+          (function (idx) {
+            var el = document.getElementById("sr" + idx);
+            if (!el) return;
+            for (var s = 1; s <= 5; s++) {
+              (function (star) {
+                var btn = document.createElement("button");
+                btn.className = "star-btn";
+                btn.textContent = "&#9733;";
+                btn.setAttribute("data-val", star);
+                btn.onclick = function () {
+                  var v = parseInt(this.getAttribute("data-val"));
+                  el.querySelectorAll(".star-btn").forEach(function (b) {
+                    b.classList.toggle(
+                      "lit",
+                      parseInt(b.getAttribute("data-val")) <= v,
+                    );
+                  });
+                };
+                el.appendChild(btn);
+              })(s);
+            }
+          })(i);
+        }
+      })();
+      function selPill(btn, groupId) {
+        document
+          .querySelectorAll("#" + groupId + " .wl-pill")
+          .forEach(function (b) {
+            b.classList.remove("sel");
+          });
+        btn.classList.add("sel");
+      }
+      function selAmt(btn) {
+        document.querySelectorAll(".donate-amt").forEach(function (b) {
+          b.classList.remove("sel");
+        });
+        btn.classList.add("sel");
+      }
+      var csIdx = 0;
+      var csTot = 9;
+      function csRender() {
+        document.querySelector(".cs-track").style.transform =
+          "translateX(-" + csIdx * 100 + "%)";
+        document.querySelectorAll(".cs-dot").forEach(function (d, i) {
+          d.classList.toggle("on", i === csIdx);
+        });
+      }
+      function csMove(dir) {
+        csIdx = (csIdx + dir + csTot) % csTot;
+        csRender();
+      }
+      function csGo(i) {
+        csIdx = i;
+        csRender();
+      }
+      setInterval(function () {
+        csMove(1);
+      }, 4000);
+
+      // Count-up animation for hero stats
+      (function () {
+        var stats = [
+          {
+            id: "cnt-network",
+            target: 1000000,
+            prefix: "$",
+            suffix: "",
+            label: "Opportunities Shared",
+            duration: 2000,
+          },
+          {
+            id: "cnt-members",
+            target: 1300,
+            suffix: "+",
+            label: "Network of BIPOC Trailblazers",
+            duration: 1800,
+          },
+          {
+            id: "cnt-retention",
+            target: 90,
+            suffix: "%",
+            label: "Retention Rate",
+            duration: 1400,
+          },
+          {
+            id: "cnt-followers",
+            target: 20,
+            suffix: "K+",
+            label: "Followers",
+            duration: 1600,
+          },
+        ];
+        function animateCount(el, target, suffix, duration, prefix) {
+          prefix = prefix || "";
+          var start = 0,
+            startTime = null;
+          function fmt(n) {
+            return n >= 1000 ? n.toLocaleString("en-US") : n;
+          }
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var ease = 1 - Math.pow(1 - progress, 3);
+            var val = Math.floor(ease * target);
+            el.textContent = prefix + fmt(val) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = prefix + fmt(target) + suffix;
+          }
+          requestAnimationFrame(step);
+        }
+        var fired = false;
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting && !fired) {
+                fired = true;
+                stats.forEach(function (s) {
+                  var el = document.getElementById(s.id);
+                  if (el)
+                    animateCount(el, s.target, s.suffix, s.duration, s.prefix);
+                });
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+        var hstats = document.querySelector(".hstats");
+        if (hstats) observer.observe(hstats);
+      })();
+    </script>
+        <style>
+      @keyframes logobelt {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #logoBelt {
+          animation: none;
+          gap: 24px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 480px) {
+        #logoBelt {
+          gap: 28px;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var b = document.getElementById("logoBelt");
+        if (!b) return;
+        b.addEventListener(
+          "touchstart",
+          function () {
+            b.style.animationPlayState = "paused";
+          },
+          { passive: true },
+        );
+        b.addEventListener(
+          "touchend",
+          function () {
+            b.style.animationPlayState = "running";
+          },
+          { passive: true },
+        );
+      })();
+    </script>
+  </body>
+</html>
